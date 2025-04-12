@@ -18,3 +18,4 @@ If you get hung up while trying to complete any one of these sessions, there is 
 - [Session 2 - Creating a landing screen](session-2-landing-screen.md)
 - [Session 3 - Styling the landing screen](session-3-styling-the-landing-screen.md)
 - [Session 4 - Global Constants and Colors](session-4-global-constants.md)
+- [Session 5 - Imports](session-5-imports.md)
