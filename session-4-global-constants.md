@@ -97,4 +97,11 @@ export default function RootLayout() {
 This will update the presentation of the header for the screen.
 The landing screen should now present itself using the settings and colors you have set in the `/app/constants.ts` file.
 
+> [!NOTE] 
+> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
+>
+> [constants.ts file for session 4](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-4-global-constants/expo-go-real-time-chat/app/constants.ts)
+>
+> [index.tsx file for session 4](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-4-global-constants/expo-go-real-time-chat/app/index.tsx)
+
 ### SESSION COMPLETE
