@@ -203,57 +203,9 @@ To this:
 ```
 Now this screen has some basic styling applied.
 
-9. However, there are some styling preferences that are present in the `styles` constant which we will want to use elsewhere in this application.  Values like these:
-```tsx
-padding: 10,
-borderRadius: 10,
-backgroundColor: "blue",
-```
-Let's extract them out into a `globalConstants` constant.
-We can then replace the styles here to control this globally in the application.
-```tsx
-const globalConstants = {
-  layout: {
-    padding: 10,
-    borderRadius: 10,
-  },
-  color: {
-    // I like the color green.  I am a big fan of Link from the Legend of Zelda.
-    // Choose a color of your own preference here:
-    // https://coolors.co/
-    primaryColor: '#38B000', // #38B000
-    primaryColorText: '#F8F9FA', // #E9ECEF
-  }
-};
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: globalConstants.layout.padding,
-    gap: 25
-  },
-  welcomeText: {
-    marginTop: 25
-  },
-  userNameInput: {
-    width: "100%",
-    borderWidth: 1,
-    borderRadius: globalConstants.layout.borderRadius,
-    padding: globalConstants.layout.padding,
-  },
-  continueButton: {
-    width: "100%",
-    borderRadius: globalConstants.layout.borderRadius,
-    padding: globalConstants.layout.padding,
-    alignItems: "center",
-    backgroundColor: globalConstants.color.primaryColor,
-  },
-  continueButtonText: {
-      color: globalConstants.color.primaryColorText
-  }
-});
-```
-> [!IMPORTANT]  
-> Please take a moment to update the `globalConstants` with settings/colors of your own preference.
+> [!NOTE] 
+> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
+>
+> [index.tsx file for session 3](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-3-styling-the-landing-screen/expo-go-real-time-chat/app/index.tsx)
 
 ### SESSION COMPLETE
