@@ -73,8 +73,6 @@ export default function Message({userDataForSelf, message, userDataForMessage}: 
 
 5. Update the below content from this:
 ```tsx
-// Add this to the imports section at the top of the file.
-
 // *Adjust* this line which is found just below the Chat() function declaration
 const { userDataForSelf, userDataListing } = useFirebaseUserData(userKey);
 
@@ -95,4 +93,17 @@ if (!userDataForSelf) {
 />
 ```
 
-### WORK IN PROGRESS
+You should now see messages for yourself and messages for other people displayed clearly and differently from one another.
+
+> [!NOTE] 
+> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
+>
+> [Message.ts file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/components/Message.tsx)
+>
+> [MessageFromSelf.tsx file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/components/MessageFromSelf.tsx)
+>
+> [MessageFromSomeoneElse.tsx file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/components/MessageFromSomeoneElse.tsx)
+>
+> [chat.tsx file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
+
+### SESSION COMPLETE
