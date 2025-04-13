@@ -1,0 +1,98 @@
+# Real-time chat with Expo Go and React Native
+## Session 9 - Message Presentation of your own messages
+
+In most chat applications, your own messages are presented in a manner that is different than messages from other people.  In this session we will create another component called `MessageFromSelf.tsx` to make your own messages stand apart from how the more generic `Messages.tsx` component.
+
+1. From the `/app/components` folder, rename the file "Message.tsx" to "MessageFromSomeoneElse.tsx".
+
+2. From the `/app/components` folder, create a new file called "MessageFromSelf.tsx".
+
+3. Paste this into the new `/app/components/MessageFromSelf.tsx` file.
+```tsx
+import { StyleSheet, Text, View } from "react-native";
+import MessageObject from "@/app/objects/MessageObject";
+import Constants from "@/app/constants";
+
+type Props = {
+    message: MessageObject;
+};
+export default function MessageFromSelf({message}: Readonly<Props>) {
+    return (
+        <View style={styles.container}>
+            <Text style={styles.messageTextContainer}>
+                {message.messageText}
+            </Text>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    messageTextContainer: {
+        borderRadius: Constants.layout.borderRadius,
+        padding: Constants.layout.padding,
+        backgroundColor: Constants.colors.primaryColor,
+        color: Constants.colors.primaryColorText
+    },
+});
+```
+
+3. From the `/app/components` folder, create a new file called "Message.tsx".
+
+4. Paste this into the new `/app/components/Message.tsx` file.
+```tsx
+import MessageFromSomeoneElse from "@/app/components/MessageFromSomeoneElse";
+import MessageFromSelf from "@/app/components/MessageFromSelf";
+import UserData from "@/app/objects/UserData";
+import MessageObject from "@/app/objects/MessageObject";
+
+type MessageHandlerProps = {
+    userDataForSelf: UserData;
+    message: MessageObject;
+    userDataForMessage: UserData | undefined;
+}
+export default function Message({userDataForSelf, message, userDataForMessage}: Readonly<MessageHandlerProps>) {
+    if (message.who === userDataForSelf.key) {
+        return (
+            <MessageFromSelf message={message} />
+        );
+    } else {
+        return (
+            <MessageFromSomeoneElse
+                message={message}
+                userDataForMessage={userDataForMessage}
+            />
+        );
+    }
+}
+```
+
+4. Open the `/app/[userKey]/chat.tsx` file.
+
+5. Update the below content from this:
+```tsx
+// Add this to the imports section at the top of the file.
+
+// *Adjust* this line which is found just below the Chat() function declaration
+const { userDataForSelf, userDataListing } = useFirebaseUserData(userKey);
+
+// And add this just below that line
+if (!userDataForSelf) {
+    return (
+        <View>
+            <Text>Data loading...</Text>
+        </View>
+    );
+}
+
+// Update the <Message/> component invocation
+<Message 
+    userDataForSelf={userDataForSelf} // Add this parameter
+    message={message}
+    userDataForMessage={userDataListing.get(message.who)}
+/>
+```
+
+### WORK IN PROGRESS
