@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     },
     messageListing: {
         flex: 1, // Fill up the remaining height of the screen
-        paddingHorizontal: Constants.layout.padding,
+        padding: Constants.layout.padding,
         backgroundColor: Constants.colors.messageListingBackgroundColor
     },
     footer: {
@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     },
     messageListing: {
         flex: 1, // Fill up the remaining height of the screen
-        paddingHorizontal: Constants.layout.padding,
+        padding: Constants.layout.padding,
         backgroundColor: Constants.colors.messageListingBackgroundColor,
         gap: Constants.layout.padding,
     },
