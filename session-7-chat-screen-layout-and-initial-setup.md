@@ -15,7 +15,7 @@ The chat screen will be split into 3 sections.
 
 2. Add this line to the `colors` section.
 ```ts
-accentedBackgroundColor: '#DEE2E6', // #DEE2E6
+messageListingBackgroundColor: '#DEE2E6', // #DEE2E6
 ```
 
 3. Open the `/app/[userKey]/chat.tsx` file.
@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     messageListing: {
         flex: 1, // Fill up the remaining height of the screen
         paddingHorizontal: Constants.layout.padding,
-        backgroundColor: Constants.colors.accentedBackgroundColor
+        backgroundColor: Constants.colors.messageListingBackgroundColor
     },
     footer: {
         // No explicit height through flex or otherwise.
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     messageListing: {
         flex: 1, // Fill up the remaining height of the screen
         paddingHorizontal: Constants.layout.padding,
-        backgroundColor: Constants.colors.accentedBackgroundColor,
+        backgroundColor: Constants.colors.messageListingBackgroundColor,
         gap: Constants.layout.padding,
     },
     message: {
