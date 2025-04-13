@@ -8,6 +8,7 @@ This is an introductory course to help educate anyone in learning the basics of 
 2. Git, https://git-scm.com/downloads
 3. An IDE of your choice, Visual Studio Code if you don't have a preference. https://code.visualstudio.com/download
 4. The Expo Go application installed on your phone to run this application, https://expo.dev/go
+5. The Google Chrome browser for local development and debugging.
 
 ### About the sessions posted here
 There are session ".md" files here that should be completed in numeric order.

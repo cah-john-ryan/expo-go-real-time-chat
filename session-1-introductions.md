@@ -8,23 +8,22 @@ https://reactnative.dev
 Examples of apps that use this technology: 
 https://reactnative.dev/showcase
 
-Helps you build applications that can be used by people on pretty much anything that has a screen. 
-Why limit what you are building to only being accessible in a web browser?
-React Native leverages the React JavaScript library at its core.  
-It is very popular and used widely in 
+Helps you build applications that can be used by people on pretty much anything that has a screen. Why limit what you are building to only being accessible in a web browser?
+
+React Native leverages the React JavaScript library at its core.
 
 ### What is Expo Go?
 https://expo.dev/
 
-Expo Go makes is easier to build, test, and deploy React Native applications.
+Expo Go makes it easier to build, test, and deploy React Native applications.  
 
 ### What is already setup for you
 On your laptop you should have the software you need to get started already installed.
 What is already installed:
 - NodeJS, https://nodejs.org/en/download
 - Git for source control management, https://git-scm.com/downloads
-- Google's Chrome browser, https://www.google.com/chrome/
 - Visual Studio Code, https://code.visualstudio.com/download
+- Google's Chrome browser, https://www.google.com/chrome/
 
 ### Getting setup
 1. Power on your laptop and make your way to where you see the Windows Desktop presented.
