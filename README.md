@@ -12,7 +12,7 @@ This is an introductory course to help educate anyone in learning the basics of 
 ### About the sessions posted here
 There are session ".md" files here that should be completed in numeric order.
 
-If you get hung up while trying to complete any one of these sessions, there is a Git branch you can checkout in this repository to see a functional example of the changes being completed.
+If you get hung up while trying to complete any one of these sessions, <ins>in this repository there is a Git branch for each session you can checkout to see a functional example of the changes being completed</ins>.
 
 - [Session 1 - Introductions](session-1-introductions.md)
 - [Session 2 - Creating a landing screen](session-2-landing-screen.md)
