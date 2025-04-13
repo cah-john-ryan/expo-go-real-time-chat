@@ -103,8 +103,6 @@ export default function RootLayout() {
 ```
 You will notice that change updated the header for the landing screen to now say "Setup User Account" instead of "Index".  Future sessions will explain what is going on with the `_layout.tsx` file.  For now this change will get the header setup for this screen with the text we want to have shown.
 
-### SESSION COMPLETE
----
 The application running in your browser should be functional, but not very pretty.
 Try entering a user name value and clicking on the Continue button.
 
@@ -145,3 +143,5 @@ export default function Index() {
   );
 }
 ```
+
+### SESSION COMPLETE
