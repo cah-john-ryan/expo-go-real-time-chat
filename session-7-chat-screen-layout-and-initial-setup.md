@@ -1,5 +1,5 @@
 # Real-time chat with Expo Go and React Native
-## Session 7 - Setup chat screen layout and initial setup
+## Session 7 - Chat screen layout and initial setup
 
 In this session we will take the barebones chat screen we have and layout the sections that need to be put in place for our content. 
 
