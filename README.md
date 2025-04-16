@@ -24,3 +24,4 @@ If you get hung up while trying to complete any one of these sessions, <ins>in t
 - [Session 7 - Chat screen layout and initial setup](session-7-chat-screen-layout-and-initial-setup.md)
 - [Session 8 - Message Presentation](session-8-message-presentation.md)
 - [Session 9 - Message Presentation of your own messages](session-9-message-presentation-of-yourself.md)
+- [Session 10 - Presentation adjustments with the help of React Native](session-10-presentation-adjustments.md)
