@@ -124,7 +124,7 @@ From this:
 <TextInput
     value={userName}
     onChangeText={(text) => {
-    setUserName(text);
+        setUserName(text);
     }}
     placeholder={"Enter your desired user name here"}
     placeholderTextColor={"grey"}
@@ -136,7 +136,7 @@ To this:
     style={styles.userNameInput}
     value={userName}
     onChangeText={(text) => {
-    setUserName(text);
+        setUserName(text);
     }}
     placeholder={"Enter your desired user name here"}
     placeholderTextColor={"grey"}
