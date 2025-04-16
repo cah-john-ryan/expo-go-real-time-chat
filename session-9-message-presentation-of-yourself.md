@@ -18,7 +18,7 @@ type Props = {
 };
 export default function MessageFromSelf({message}: Readonly<Props>) {
     return (
-        <View style={styles.container}>
+        <View>
             <Text style={styles.messageTextContainer}>
                 {message.messageText}
             </Text>
@@ -27,9 +27,6 @@ export default function MessageFromSelf({message}: Readonly<Props>) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     messageTextContainer: {
         borderRadius: Constants.layout.borderRadius,
         padding: Constants.layout.padding,
