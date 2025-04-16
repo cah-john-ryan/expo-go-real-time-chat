@@ -1,5 +1,5 @@
 # Real-time chat with Expo Go and React Native
-## Session 9 - Presentation adjustments with the help of React Native
+## Session 10 - Presentation adjustments with the help of React Native
 
 If you the conversation in the chat has grown larger than your screen or if you have tried running this application on your phone then you will notice that there are some presentation concerns.  There is no ability to scroll/swipe up and down through the chat conversation and the messages overflow and overlap the new message input.
 
