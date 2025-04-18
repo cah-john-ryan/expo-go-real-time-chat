@@ -25,3 +25,4 @@ If you get hung up while trying to complete any one of these sessions, <ins>in t
 - [Session 8 - Message Presentation](session-8-message-presentation.md)
 - [Session 9 - Message Presentation of your own messages](session-9-message-presentation-of-yourself.md)
 - [Session 10 - Presentation adjustments with the help of React Native](session-10-presentation-adjustments.md)
+- [Session 11 - Add the ability to embed links for other applications and email addresses in messages](session-11-messages-with-links.md)
