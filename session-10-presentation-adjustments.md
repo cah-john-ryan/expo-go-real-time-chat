@@ -135,3 +135,5 @@ Now these display issues should be resolved and we can add more features to this
 > [chat.ts file for session 10](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-10-presentation-adjustments/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 11 - Add the ability to embed links for other applications and email addresses in messages](session-11-messages-with-links.md)

@@ -121,3 +121,5 @@ Your application is now wired up to work with a Firebase instance to create and 
 
 ### SESSION COMPLETE
 
+Up next -> [Session 6 - Adding a chat route](session-6-adding-chat-route.md)
+

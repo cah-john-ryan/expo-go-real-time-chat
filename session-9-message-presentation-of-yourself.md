@@ -104,3 +104,5 @@ You should now see messages for yourself and messages for other people displayed
 > [chat.tsx file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 10 - Presentation adjustments with the help of React Native](session-10-presentation-adjustments.md)

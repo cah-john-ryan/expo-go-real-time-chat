@@ -253,3 +253,5 @@ You have completed a milestone for today.
 > [chat.tsx file for session 7](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-7-chat-screen-layout-and-initial-setup/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 8 - Message Presentation](session-8-message-presentation.md)

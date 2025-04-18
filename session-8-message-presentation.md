@@ -106,3 +106,5 @@ You should now see who sent what message in the message listing.
 > [chat.tsx file for session 8](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-8-message-presentation/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 9 - Message Presentation of your own messages](session-9-message-presentation-of-yourself.md)

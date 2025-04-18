@@ -209,3 +209,5 @@ Now this screen has some basic styling applied.
 > [index.tsx file for session 3](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-3-styling-the-landing-screen/expo-go-real-time-chat/app/index.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 4 - Global Constants and Colors](session-4-global-constants.md)

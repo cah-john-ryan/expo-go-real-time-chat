@@ -105,3 +105,5 @@ The landing screen should now present itself using the settings and colors you h
 > [index.tsx file for session 4](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-4-global-constants/expo-go-real-time-chat/app/index.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 5 - Imports](session-5-imports.md)

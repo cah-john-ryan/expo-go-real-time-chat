@@ -51,3 +51,5 @@ npx expo start
 You should now have the default template up and running on your computer.
 
 ### SESSION COMPLETE
+
+Up next -> [Session 2 - Creating a landing screen](session-2-landing-screen.md)

@@ -145,3 +145,5 @@ export default function Index() {
 ```
 
 ### SESSION COMPLETE
+
+Up next -> [Session 3 - Styling the landing screen](session-3-styling-the-landing-screen.md)

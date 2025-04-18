@@ -68,3 +68,5 @@ Notice the `useLocalSearchParams` from "expo-router".  With this, we can retreiv
 Now when you enter a user name on the landing screen and click on the Continue button, you should be taken to this new chat screen and your Firebase userKey should be identified.
 
 ### SESSION COMPLETE
+
+Up next -> [Session 7 - Chat screen layout and initial setup](session-7-chat-screen-layout-and-initial-setup.md)
