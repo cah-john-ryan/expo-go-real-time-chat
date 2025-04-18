@@ -18,15 +18,24 @@ type Props = {
 };
 export default function MessageFromSelf({message}: Readonly<Props>) {
     return (
-        <View>
-            <Text style={styles.messageTextContainer}>
-                {message.messageText}
-            </Text>
+        <View style={styles.container}>
+            <View style={styles.messageContainer}>
+                <Text style={styles.messageTextContainer}>
+                    {message.messageText}
+                </Text>
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
+    container: {
+        display: "flex",
+        flexDirection: "row-reverse",
+    },
+    messageContainer: {
+        flexBasis: "90%"
+    },
     messageTextContainer: {
         borderRadius: Constants.layout.borderRadius,
         padding: Constants.layout.padding,
@@ -68,13 +77,14 @@ export default function Message({userDataForSelf, message, userDataForMessage}: 
 
 4. Open the `/app/[userKey]/chat.tsx` file.
 
-5. Update the below content from this:
+5. Update the below content as described:
 ```tsx
 // *Adjust* this line which is found just below the Chat() function declaration
+// You will be adding userDataForSelf here.
 const { userDataForSelf, userDataListing } = useFirebaseUserData(userKey);
 
-// And add this just below that line
-if (!userDataForSelf) {
+// And add this as well to handle rendering the data we are dependant on is not yet defined
+if (!messages || !userDataForSelf) {
     return (
         <View>
             <Text>Data loading...</Text>
@@ -82,7 +92,8 @@ if (!userDataForSelf) {
     );
 }
 
-// Update the <Message/> component invocation
+...
+
 <Message 
     userDataForSelf={userDataForSelf} // Add this parameter
     message={message}

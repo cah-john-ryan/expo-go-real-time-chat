@@ -32,17 +32,23 @@ type Props = {
 export default function Message({message, userDataForMessage}: Readonly<Props>) {
     return (
         <View style={styles.container}>
-            <Text>{userDataForMessage?.userName}</Text>
-            <Text style={styles.messageTextContainer}>
-                {message.messageText}
-            </Text>
+            <View style={styles.messageContainer}>
+                <Text>{userDataForMessage?.userName}</Text>
+                <Text style={styles.messageTextContainer}>
+                    {message.messageText}
+                </Text>
+            </View>
         </View>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        display: "flex",
+        flexDirection: "row",
+    },
+    messageContainer: {
+        flexBasis: "90%"
     },
     messageTextContainer: {
         borderRadius: Constants.layout.borderRadius,
@@ -91,7 +97,6 @@ message: {
     borderRadius: Constants.layout.borderRadius,
     padding: Constants.layout.padding,
 },
-
 ```
 
 You should now see who sent what message in the message listing.
