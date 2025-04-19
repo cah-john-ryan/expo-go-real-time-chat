@@ -308,3 +308,5 @@ THIS IS ACTUALLY GOOD.  That big block of text is actually image data that the c
 > [post-a-photo.tsx file for session 13](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-13-post-a-photo/expo-go-real-time-chat/app/%5BuserKey%5D/post-a-photo.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 14 - View photos](session-14-view-photos.md)

@@ -28,3 +28,4 @@ If you get hung up while trying to complete any one of these sessions, <ins>in t
 - [Session 11 - Add the ability to embed links for other applications and email addresses in messages](session-11-messages-with-links.md)
 - [Session 12 - Using icons in Expo Go and creating a common IconButton component](session-12-icon-button.md)
 - [Session 13 - Post a photo](session-13-post-a-photo.md)
+- [Session 14 - View photos](session-14-view-photos.md)

@@ -1,5 +1,5 @@
 # Real-time chat with Expo Go and React Native
-## Session 14 - View photo
+## Session 14 - View photos
 
 Now that we are able to post messages with photos we need to update our chat application to properly display them.
 
@@ -128,3 +128,19 @@ export default function Message({userDataForSelf, message, userDataForMessage}: 
     } 
 }
 ```
+
+Now, when you look at the chat screen you should be able to see the photos that everyone posted.
+
+#### 🎉 Congratulations! 🎉
+Completing these last two sessions is quite and accomplishment.  I am impressed!
+
+> [!NOTE] 
+> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
+>
+> [ImageFromSelf.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/ImageFromSelf.tsx)
+>
+> [ImageFromSomeoneElse.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/ImageFromSomeoneElse.tsx)
+>
+> [Message.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/Message.tsx)
+
+### SESSION COMPLETE
