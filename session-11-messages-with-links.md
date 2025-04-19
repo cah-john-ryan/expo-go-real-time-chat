@@ -30,15 +30,33 @@ export default function MessageFromSelf({message}: Readonly<Props>) {
         </View>
     );
 }
-```
 
+const styles = StyleSheet.create({
+    container: {
+        display: "flex",
+        flexDirection: "row-reverse",
+    },
+    messageContainer: {
+        flexBasis: "90%"
+    },
+    messageTextContainer: {
+        borderRadius: Constants.layout.borderRadius,
+        padding: Constants.layout.padding,
+        marginBottom: Constants.layout.padding,
+        backgroundColor: Constants.colors.primaryColor,
+        color: Constants.colors.primaryColorText
+    },
+});
+```
 To this:
 ```tsx
 export default function MessageFromSelf({message}: Readonly<Props>) {
     return (
         <View>
             <View style={styles.messageTextContainer}>
+                {/* Adding the Autolink component to handle this complexity */}
                 <Autolink 
+                    style={styles.messageText}
                     text={message.messageText}
                     email
                     url
@@ -48,6 +66,26 @@ export default function MessageFromSelf({message}: Readonly<Props>) {
         </View>
     );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        display: "flex",
+        flexDirection: "row-reverse",
+    },
+    messageContainer: {
+        flexBasis: "90%"
+    },
+    messageTextContainer: {
+        borderRadius: Constants.layout.borderRadius,
+        padding: Constants.layout.padding,
+        marginBottom: Constants.layout.padding,
+        backgroundColor: Constants.colors.primaryColor
+    },
+    messageText: {
+        // Migrating this font color from messageTextContainer to where it is now passed into the Autolink component as that is where the text resides
+        color: Constants.colors.primaryColorText
+    }
+});
 ```
 
 5. Open the `/app/components/MessageFromSomeoneElse.tsx` file.
@@ -73,6 +111,7 @@ export default function MessageFromSomeoneElse({message, userDataForMessage}: Re
         <View>
             <Text>{userDataForMessage?.userName}</Text>
             <View style={styles.messageTextContainer}>
+                {/* Adding the Autolink component to handle this complexity */}
                 <Autolink 
                     text={message.messageText}
                     email
@@ -88,5 +127,12 @@ export default function MessageFromSomeoneElse({message, userDataForMessage}: Re
 Recheck the app and you should see links for apps and email addresses appear automatically in message on the screen.
 
 If you look at the website for this `<AutoLink/>` component, there are several other types of links it can support.  Feel free to add any others you want to try out.
+
+> [!NOTE] 
+> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
+>
+> [MessageFromSelf.ts file for session 11](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-11-messages-with-links/expo-go-real-time-chat/app/components/MessageFromSelf.tsx)
+>
+> [MessageFromSomeoneElse.ts file for session 11](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-11-messages-with-links/expo-go-real-time-chat/app/components/MessageFromSomeoneElse.tsx)
 
 ### SESSION COMPLETE
