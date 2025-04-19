@@ -136,3 +136,5 @@ If you look at the website for this `<AutoLink/>` component, there are several o
 > [MessageFromSomeoneElse.ts file for session 11](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-11-messages-with-links/expo-go-real-time-chat/app/components/MessageFromSomeoneElse.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 12 - Using icons in Expo Go and creating a common IconButton component](session-12-icon-button.md)

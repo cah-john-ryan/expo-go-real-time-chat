@@ -115,3 +115,5 @@ This should make the submit IconButton appear only when there is a new message b
 > [chat.tsx file for session 12](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-12-icon-button/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 13 - Post a photo](session-13-post-a-photo.md)
