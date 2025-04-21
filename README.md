@@ -29,3 +29,4 @@ If you get hung up while trying to complete any one of these sessions, <ins>in t
 - [Session 12 - Using icons in Expo Go and creating a common IconButton component](session-12-icon-button.md)
 - [Session 13 - Post a photo](session-13-post-a-photo.md)
 - [Session 14 - View photos](session-14-view-photos.md)
+- [Session 15 - Emojis](session-15-emojis.md)

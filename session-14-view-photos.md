@@ -151,3 +151,5 @@ Completing these last two sessions is quite and accomplishment.  I am impressed!
 > [Message.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/Message.tsx)
 
 ### SESSION COMPLETE
+
+Up next -> [Session 15 - Emojis](session-15-emojis.md)
