@@ -5,11 +5,18 @@ Now that we are able to post messages with photos we need to update our chat app
 
 To do this, we will need to copy both of the below components we already have into new files.
 
-1. Make a copy of the `app/components/MessageFromSelf.tsx` file.  Call the new file `app/components/ImageFromSelf.tsx`.
+1. Create the new folder `app/components/message/`.
 
-2. Make a copy of the `app/components/MessageFromSomeoneElse.tsx` file.  Call the new file `app/components/ImageFromSomeoneElse.tsx`.
+2. In Visual Studio Code, drag the `app/components/MessageFromSelf.tsx` and `app/components/MessageFromSomeoneElse.tsx` files into `app/components/message/` folder.
 
-3. Open the file `app/components/ImageFromSelf.tsx`.
+- `app/components/MessageFromSelf.tsx` --> `app/components/message/MessageFromSelf.tsx`
+- `app/components/MessageFromSomeoneElse.tsx` -->`app/components/message/MessageFromSomeoneElse.tsx`
+
+3. Make a copy of the `app/components/message/MessageFromSelf.tsx` file.  Call the new file `app/components/message/ImageFromSelf.tsx`.
+
+4. Make a copy of the `app/components/message/MessageFromSomeoneElse.tsx` file.  Call the new file `app/components/message/ImageFromSomeoneElse.tsx`.
+
+5. Open the file `app/components/ImageFromSelf.tsx`.
 ```tsx
 // Add Image to this import
 import { Image, StyleSheet, View } from "react-native";
@@ -47,7 +54,7 @@ imageContainer: {
 }
 ```
 
-4. Open the file `app/components/ImageFromSomeoneElse.tsx`.
+6. Open the file `app/components/ImageFromSomeoneElse.tsx`.
 ```tsx
 // Add Image to this import
 import { Image, StyleSheet, View } from "react-native";
@@ -89,7 +96,7 @@ imageContainer: {
 That should do it for the new image components.
 Now we need to update the generic `<Message/>` component to render the right type of message in the right circumstance.
 
-5. Edit the `app/components/Message.tsx` file.
+7. Edit the `app/components/Message.tsx` file.
 ```tsx
 // Add these imports
 import MessageType from "@/app/objects/MessageType";
@@ -137,9 +144,9 @@ Completing these last two sessions is quite and accomplishment.  I am impressed!
 > [!NOTE] 
 > You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
 >
-> [ImageFromSelf.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/ImageFromSelf.tsx)
+> [ImageFromSelf.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/message/ImageFromSelf.tsx)
 >
-> [ImageFromSomeoneElse.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/ImageFromSomeoneElse.tsx)
+> [ImageFromSomeoneElse.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/message/ImageFromSomeoneElse.tsx)
 >
 > [Message.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/Message.tsx)
 
