@@ -99,12 +99,12 @@ Let's go a bit further.
 
 To this:
 ```tsx
-{newMessage && (
+{newMessage ? (
     <IconButton 
         name="arrow-up"
         onPress={submitNewMessage}
     />
-)}
+) : null}
 ```
 
 This should make the submit IconButton appear only when there is a new message being entered.
