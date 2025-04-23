@@ -25,6 +25,11 @@ What is already installed:
 - Visual Studio Code, https://code.visualstudio.com/download
 - Google's Chrome browser, https://www.google.com/chrome/
 
+### What you need to setup yourself
+If you have a smartphone, there is a link to the installation of the Expo Go app for your phone via the link below.
+
+https://expo.dev/go
+
 ### Getting setup
 1. Power on your laptop and make your way to where you see the Windows Desktop presented.
 2. Click on the Visual Studio Code icon.
