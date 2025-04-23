@@ -19,6 +19,8 @@ npx expo start
 
 #### The application that is running now should be much more basic in presentation.
 
+---
+
 > [!NOTE] 
 > The Core Components for React Native can be found via the link below:
 >
