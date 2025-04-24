@@ -1,39 +1,24 @@
-import { StyleSheet, Text, View } from "react-native";
+import MessageFromSomeoneElse from "@/app/components/message/MessageFromSomeoneElse";
+import MessageFromSelf from "@/app/components/message/MessageFromSelf";
 import UserData from "@/app/objects/UserData";
 import MessageObject from "@/app/objects/MessageObject";
-import Constants from "@/app/constants";
 
-type Props = {
+type MessageHandlerProps = {
+    userDataForSelf: UserData;
     message: MessageObject;
     userDataForMessage: UserData | undefined;
-};
-export default function Message({message, userDataForMessage}: Readonly<Props>) {
-    return (
-        <View style={styles.container}>
-            <View style={styles.messageContainer}>
-
-                <Text>{userDataForMessage?.userName}</Text>
-
-                <Text style={styles.messageTextContainer}>
-                    {message.messageText}
-                </Text>
-                
-            </View>
-        </View>
-    );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        display: "flex",
-        flexDirection: "row",
-    },
-    messageContainer: {
-        flexBasis: "90%"
-    },
-    messageTextContainer: {
-        borderRadius: Constants.layout.borderRadius,
-        padding: Constants.layout.padding,
-        backgroundColor: Constants.colors.messageBackgroundColor,
-    },
-});
+export default function Message({userDataForSelf, message, userDataForMessage}: Readonly<MessageHandlerProps>) {
+    if (message.who === userDataForSelf?.key) {
+        return (
+            <MessageFromSelf message={message} />
+        );
+    } else {
+        return (
+            <MessageFromSomeoneElse
+                message={message}
+                userDataForMessage={userDataForMessage}
+            />
+        );
+    }
+}

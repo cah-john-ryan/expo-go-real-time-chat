@@ -12,7 +12,16 @@ export default function Chat() {
     const [ newMessage, setNewMessage ] = useState<string>("");
     const { messages, storeMessage } = useFirebaseMessages();
     const { userKey } = useLocalSearchParams();
-    const { userDataListing } = useFirebaseUserData(userKey);
+    const { userDataForSelf, userDataListing } = useFirebaseUserData(userKey);
+
+    // And add this as well to handle rendering the data we are dependant on is not yet defined
+    if (!messages || !userDataForSelf) {
+        return (
+            <View>
+                <Text>Data loading...</Text>
+            </View>
+        );
+    }
 
     const submitNewMessage = () => {
         // Only submit a message if one is entered.
@@ -39,7 +48,8 @@ export default function Chat() {
                 {/* We will have a better way to manage this than the implementation below but for now this will be how it will function. */}
                 {messages.toReversed().map(message => (
                     <View key={message.key}>
-                        <Message
+                        <Message 
+                            userDataForSelf={userDataForSelf} // Add this parameter
                             message={message}
                             userDataForMessage={userDataListing.get(message.who)}
                         />
@@ -84,7 +94,7 @@ const styles = StyleSheet.create({
         padding: Constants.layout.padding,
         display: "flex",
         flexDirection: "row",
-        gap: Constants.layout.padding
+        gap: Constants.layout.padding,
     },
     newMessageInput: {
         flex: 1,
