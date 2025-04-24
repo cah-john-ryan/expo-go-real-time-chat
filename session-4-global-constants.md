@@ -26,7 +26,7 @@ export default {
     // Choose a color of your own preference here:
     // https://coolors.co/
     primaryColor: '#38B000', // #38B000
-    primaryColorText: '#F8F9FA', // #E9ECEF
+    primaryColorText: '#F8F9FA', // #F8F9FA
   }
 };
 ```
