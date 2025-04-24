@@ -63,7 +63,6 @@ https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/e
 firebaseConfigSecrets.js
 ```
 
-
 13. Open the `/app/index.tsx` file.
 
 14. Add the below import:
@@ -144,8 +143,8 @@ git commit -m "session-5-imports done"
 ```
 
 
-17. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
-18. Copy the below commands and paste them into the command prompt window:
+18. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+19. Copy the below commands and paste them into the command prompt window:
 ```
 git add .
 git commit -m "session-5-imports done"
