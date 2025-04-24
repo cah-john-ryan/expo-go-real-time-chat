@@ -44,12 +44,6 @@ export default app;
 5. You will find a file named "firebaseConfigSecrets.js" in the Documents folder of your computer.  Copy this file into this project to where it will be alongside the existing `/firebaseConfig.js` file.
 (This file contains the secrets that you need in order to connect to a Firebase instance I have setup beforehand.)
 
-<<<<<<< HEAD
-// For more information on how to access Firebase in your project,
-// see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
-
-=======
->>>>>>> 48e39495 (Update session-5-imports.md)
 6. Open the below link in your browser.
 https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/app/imports.zip
 
@@ -144,20 +138,6 @@ Your application is now wired up to work with a Firebase instance to create and 
 git add .
 git commit -m "session-5-imports done"
 ```
-
-
-> [!NOTE] 
-> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
->
-> [index.tsx file for session 5](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/app/index.tsx)
-
-18. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
-19. Copy the below commands and paste them into the command prompt window:
-```
-git add .
-git commit -m "session-5-imports done"
-```
-
 
 ### SESSION COMPLETE
 
