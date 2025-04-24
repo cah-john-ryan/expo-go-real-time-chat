@@ -10,6 +10,6 @@ export default {
     primaryColor: '#38B000', // #38B000
     primaryColorText: '#F8F9FA', // #F8F9FA
 
-    messageListingBackgroundColor: '#DEE2E6', // #DEE2E6
+    messageBackgroundColor: '#CED4DA', // #CED4DA
   }
 };

@@ -5,11 +5,14 @@ import Constants from "@/app/constants";
 import useFirebaseMessages from "@/app/hooks/useFirebaseMessages";
 import { useState } from "react";
 import MessageType from "@/app/objects/MessageType";
+import Message from "@/app/components/Message";
+import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
 
 export default function Chat() {
     const [ newMessage, setNewMessage ] = useState<string>("");
     const { messages, storeMessage } = useFirebaseMessages();
     const { userKey } = useLocalSearchParams();
+    const { userDataListing } = useFirebaseUserData(userKey);
 
     const submitNewMessage = () => {
         // Only submit a message if one is entered.
@@ -35,8 +38,11 @@ export default function Chat() {
                 {/* One last note, the array being provided is in reverse order where the most recent message comes first. */}
                 {/* We will have a better way to manage this than the implementation below but for now this will be how it will function. */}
                 {messages.toReversed().map(message => (
-                    <View key={message.key} style={styles.message}>
-                        <Text>{message.messageText}</Text>
+                    <View key={message.key}>
+                        <Message
+                            message={message}
+                            userDataForMessage={userDataListing.get(message.who)}
+                        />
                     </View>
                 ))}
 
@@ -67,25 +73,15 @@ export default function Chat() {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, // Fill up the whole screen
+        flex: 1,
     },
     messageListing: {
-        flex: 1, // Fill up the remaining height of the screen
-        padding: Constants.layout.padding,
-        backgroundColor: Constants.colors.messageListingBackgroundColor,
+        flex: 1,
+        paddingHorizontal: Constants.layout.padding,
         gap: Constants.layout.padding,
-    },
-    // Add this styling so that each message is displayed in a message "bubble"
-    message: {
-        borderWidth: 1,
-        borderRadius: Constants.layout.borderRadius,
-        padding: Constants.layout.padding,
     },
     footer: {
         padding: Constants.layout.padding,
-    
-        // This part is new for the footer and uses flexbox to layout the
-        // input and button alongside one another with a standard gap between them.
         display: "flex",
         flexDirection: "row",
         gap: Constants.layout.padding
