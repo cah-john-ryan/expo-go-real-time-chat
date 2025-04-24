@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import Constants from "@/app/constants";
 
 export default function Index() {
   const [userName, setUserName] = useState<string>('');
@@ -34,7 +35,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 10,
+    padding: Constants.layout.padding,
     gap: 25
   },
   welcomeText: {
@@ -43,22 +44,17 @@ const styles = StyleSheet.create({
   userNameInput: {
     width: "100%",
     borderWidth: 1,
-    borderRadius: 10,
-    padding: 10,
+    borderRadius: Constants.layout.borderRadius,
+    padding: Constants.layout.padding,
   },
   continueButton: {
-    // Makes the input fill the entire horizontal width of the parent container.
     width: "100%",
-    // Gives rounded edges to the border around this element.
-    borderRadius: 10,
-    // Places a padding inside the element so that whatever is entered does not touch the borders.
-    padding: 10,
-    // Aligns the content in the button to be shown in the horizontal center of the screen.
+    borderRadius: Constants.layout.borderRadius,
+    padding: Constants.layout.padding,
     alignItems: "center",
-    // Assigns a prominent color to the background to indicate this is an interactive button.
-    backgroundColor: "blue",
+    backgroundColor: Constants.colors.primaryColor,
   },
   continueButtonText: {
-      color: "white"
+      color: Constants.colors.primaryColorText
   }
 });

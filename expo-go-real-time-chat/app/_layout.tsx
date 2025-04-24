@@ -1,8 +1,17 @@
 import { Stack } from "expo-router";
+import Constants from "@/app/constants";
 
 export default function RootLayout() {
   return (
-    <Stack>
+    <Stack 
+      screenOptions={{
+      headerStyle: {
+          backgroundColor: Constants.colors.primaryColor,
+      },
+      headerShadowVisible: false,
+      headerTintColor: Constants.colors.primaryColorText
+  }}
+    >
       <Stack.Screen name="index" options={{title: 'Setup User Account'}}/>
     </Stack>
   );
