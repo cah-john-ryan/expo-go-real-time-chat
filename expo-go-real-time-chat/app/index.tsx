@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import Constants from "@/app/constants";
 import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
-// Add this to your imports.
-import { Href, useRouter } from "expo-router";
+import useLocalStorage from "@/app/hooks/useLocalStorage";
+import { Href, useFocusEffect, useRouter } from "expo-router";
 
 export default function Index() {
-  // Now add this here so that you have the Expo Go router available.
   const router = useRouter();
   const [userName, setUserName] = useState<string>('');
   const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
+  const [userKeyInLocalStorage, setUserKeyInLocalStorage] = useLocalStorage('userKey');
+
+  useFocusEffect(
+    useCallback(() => {
+        if (userKeyInLocalStorage) {
+            console.log(`Index.useFocusEffect: userKey found in local storage.  Redirecting to the chat screen.  (userKey: ${userKeyInLocalStorage})`);
+            const homeRoute = `/${userKeyInLocalStorage}/chat` as Href;
+            router.replace(homeRoute);
+        }
+    }, [userKeyInLocalStorage])
+  );
   
   const storeUserName = async () => {
       if (!userName) {
@@ -23,6 +33,8 @@ export default function Index() {
       } else {
           userData = await storeNewUserData(userName);
       }
+      setUserKeyInLocalStorage(userData.key);
+
       // Add this here replacing what was there before.
       // This will have this screen transition to the chat screen/route when the userName is identified.
       const homeRoute = `/${userData.key}/chat` as Href;
