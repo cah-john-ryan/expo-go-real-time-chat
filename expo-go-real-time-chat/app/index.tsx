@@ -1,9 +1,28 @@
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import Constants from "@/app/constants";
+import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
 
 export default function Index() {
   const [userName, setUserName] = useState<string>('');
+  const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
+  
+  const storeUserName = async () => {
+      if (!userName) {
+          return;
+      }
+      const existingUserData = findByUserName(userName);
+      let userData;
+      if (existingUserData) {
+          console.log(`The user name ${userName} already exists.  Assuming identity of that user. (userKey: ${existingUserData.key})`);
+          userData = existingUserData;
+      } else {
+          userData = await storeNewUserData(userName);
+      }
+      alert(`Continue pressed. Current userKey in Firebase is: ${userData.key}`);
+      // In the next session we will have the application change to a new chat screen with this user information.
+  };
+  
   return (
     <View
       style={styles.container}
@@ -22,9 +41,7 @@ export default function Index() {
 
       <Pressable
           style={styles.continueButton}
-          onPress={() => {
-            alert(`Continue pressed. Current userName: ${userName}`)
-          }}
+          onPress={storeUserName}
       >
           <Text style={styles.continueButtonText}>Continue</Text>
       </Pressable>
