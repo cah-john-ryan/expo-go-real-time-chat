@@ -21,6 +21,7 @@ If you get hung up while trying to complete any one of these sessions, <ins>in t
 - [Session 4 - Global Constants and Colors](session-4-global-constants.md)
 - [Session 5 - Imports](session-5-imports.md)
 - [Session 6 - Adding a chat route](session-6-adding-chat-route.md)
+- [Session 6b - Skip the landing page](session-6b-skip-landing-page.md)
 - [Session 7 - Chat screen layout and initial setup](session-7-chat-screen-layout-and-initial-setup.md)
 - [Session 8 - Message Presentation](session-8-message-presentation.md)
 - [Session 9 - Message Presentation of your own messages](session-9-message-presentation-of-yourself.md)
