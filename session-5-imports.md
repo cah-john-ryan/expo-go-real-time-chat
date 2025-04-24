@@ -12,6 +12,7 @@ Information on Firebase:
 
 2. From the command prompt window, enter the below commands to install the needed libraries to work with Firebase:
 ```
+cd expo-go-real-time-chat
 npx expo install firebase
 npx expo customize metro.config.js
 ```
