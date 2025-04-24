@@ -119,18 +119,16 @@ With this:
     <Text style={styles.continueButtonText}>Continue</Text>
 </Pressable>
 ```
+
+Your application is now wired up to work with a Firebase instance to create and retrieve user information.
+
 > [!NOTE] 
 > Given the time we have, I am not going to cover adding an actual authentication process to secure the data we are keeping in Firebase during this class.
 > 
 > I am going to run this class on a honor system in trusting that you will not abuse this access.  Please be mindful of the user name you are creating next as well as any messages you create as they will be visible to everyone else in the class.
 >
 > This Firebase instance will only exist for the duration of the class today.  If you continue working with this project after today you will need to explore setting up a Firebase instance for yourself.
-
-17. Now in the application, enter a user name you would prefer to use for this class and then press the Continue button.  <ins>You should see an alert telling you about a key you have setup in Firebase.</ins>
-
-Your application is now wired up to work with a Firebase instance to create and retrieve user information.
-
-> [!NOTE] 
+>
 > You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
 >
 > [index.tsx file for session 5](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/app/index.tsx)
