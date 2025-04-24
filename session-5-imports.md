@@ -129,6 +129,14 @@ With this:
 
 Your application is now wired up to work with a Firebase instance to create and retrieve user information.
 
+17. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+18. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-5-imports done"
+```
+
+
 ### SESSION COMPLETE
 
 Up next -> [Session 6 - Adding a chat route](session-6-adding-chat-route.md)
