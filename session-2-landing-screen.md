@@ -148,6 +148,15 @@ export default function Index() {
 
 You now have a screen where someone can enter a user name that they desire.  It is not very pretty but it is functional.  In the next session we will work on improving the appearance of this screen.
 
+Let's save the state of your work now that this session is done.
+
+13. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+14. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-2-landing-screen done"
+```
+
 ### SESSION COMPLETE
 
 Up next -> [Session 3 - Styling the landing screen](session-3-styling-the-landing-screen.md)
