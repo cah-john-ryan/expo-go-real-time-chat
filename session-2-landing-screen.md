@@ -146,6 +146,8 @@ export default function Index() {
 }
 ```
 
+You now have a screen where someone can enter a user name that they desire.  It is not very pretty but it is functional.
+
 ### SESSION COMPLETE
 
 Up next -> [Session 3 - Styling the landing screen](session-3-styling-the-landing-screen.md)
