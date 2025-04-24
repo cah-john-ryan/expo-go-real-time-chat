@@ -130,6 +130,11 @@ With this:
 
 Your application is now wired up to work with a Firebase instance to create and retrieve user information.
 
+> [!NOTE] 
+> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
+>
+> [index.tsx file for session 5](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/app/index.tsx)
+
 18. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
 19. Copy the below commands and paste them into the command prompt window:
 ```
