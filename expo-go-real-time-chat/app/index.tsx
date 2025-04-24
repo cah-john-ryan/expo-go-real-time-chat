@@ -6,10 +6,10 @@ import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
 import { Href, useRouter } from "expo-router";
 
 export default function Index() {
-  const [userName, setUserName] = useState<string>('');
-  const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
   // Now add this here so that you have the Expo Go router available.
   const router = useRouter();
+  const [userName, setUserName] = useState<string>('');
+  const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
   
   const storeUserName = async () => {
       if (!userName) {
