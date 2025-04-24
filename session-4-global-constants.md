@@ -104,6 +104,16 @@ The landing screen should now present itself using the settings and colors you h
 >
 > [index.tsx file for session 4](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-4-global-constants/expo-go-real-time-chat/app/index.tsx)
 
+Let's save the state of your work now that this session is done.
+
+8. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+9. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-4-global-constants done"
+```
+
+
 ### SESSION COMPLETE
 
 Up next -> [Session 5 - Imports](session-5-imports.md)
