@@ -33,10 +33,13 @@ export default function Message({message, userDataForMessage}: Readonly<Props>) 
     return (
         <View style={styles.container}>
             <View style={styles.messageContainer}>
+
                 <Text>{userDataForMessage?.userName}</Text>
+
                 <Text style={styles.messageTextContainer}>
                     {message.messageText}
                 </Text>
+                
             </View>
         </View>
     );
@@ -64,10 +67,10 @@ Having this in its own file should help us manage some of this complexity withou
 8. Update the below content from this:
 ```tsx
 // Add this to the imports section at the top of the file.
-import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
 import Message from "@/app/components/Message";
 
 // Add this just below the Chat() function declaration
+const { userKey } = useLocalSearchParams(); // after this line
 const { userDataListing } = useFirebaseUserData(userKey);
 
 // Now modify the messages being rendered to use the new component.
@@ -109,6 +112,13 @@ You should now see who sent what message in the message listing.
 > [Message.tsx file for session 8](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-8-message-presentation/expo-go-real-time-chat/app/components/Message.tsx)
 >
 > [chat.tsx file for session 8](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-8-message-presentation/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
+
+9. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+10. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-8-message-presentationdone"
+```
 
 ### SESSION COMPLETE
 
