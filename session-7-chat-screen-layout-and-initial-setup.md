@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
         // No explicit height through flex or otherwise.
         // This component will take up only the space it needs. 
         padding: Constants.layout.padding,
-    }
+    },
 });
 ```
 
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
         // No explicit height through flex or otherwise.
         // This component will take up only the space it needs. 
         padding: Constants.layout.padding,
-    }
+    },
 });
 ```
 
@@ -166,28 +166,53 @@ newMessageInput: {
 }
 ```
 
-8. Nearly everything is setup but actually submitting a new message to the chat.  To do this, let's add a submit button to the bottom of the screen next to the new message input.
+Nearly everything is setup but actually submitting a new message to the chat.  To do this, let's add a submit button to the bottom of the screen next to the new message input.
 
+8. Adjust this:
 ```tsx
-// Logic at the top of the component to process the 
-const { messages, storeMessage } = useFirebaseMessages();
-const [ newMessage, setNewMessage ] = useState<string>("");
-const { userKey } = useLocalSearchParams();
+export default function Chat() {
+    const [ newMessage, setNewMessage ] = useState<string>("");
+    const { messages } = useFirebaseMessages();
+    const { userKey } = useLocalSearchParams();
+```
+To this:
+```tsx
+export default function Chat() {
+    const [ newMessage, setNewMessage ] = useState<string>("");
+    const { messages, storeMessage } = useFirebaseMessages();
+    const { userKey } = useLocalSearchParams();
 
-const submitNewMessage = () => {
-    // Only submit a message if one is entered.
-    if (newMessage) { 
-        // Some logic to handle how Expo provides the userKey.  Don't pay this much mind.
-        const parsedUserKey = Array.isArray(userKey) ? userKey[0] : userKey;
+    const submitNewMessage = () => {
+        // Only submit a message if one is entered.
+        if (newMessage) { 
+            // Some logic to handle how Expo provides the userKey.  Don't pay this much mind.
+            const parsedUserKey = Array.isArray(userKey) ? userKey[0] : userKey;
 
-        // A storeMethod() I have pre-built that will handle sending this new messag to Firebase.
-        storeMessage(parsedUserKey, newMessage, MessageType.Text);
+            // A storeMethod() I have pre-built that will handle sending this new messag to Firebase.
+            storeMessage(parsedUserKey, newMessage, MessageType.Text);
 
-        setNewMessage(""); // Clear the input for the next new message to be entered.
-    }
-};
+            setNewMessage(""); // Clear the input for the next new message to be entered.
+        }
+    };
+```
 
-// In the template, add a new <Pressable/> button to submit new messages.
+9. In the template, add a new `<Pressable/>` button to submit new messages.
+From this:
+```tsx
+<View style={styles.footer}>
+    <TextInput
+        style={styles.newMessageInput}
+        value={newMessage}
+        onChangeText={(text) => {
+            setNewMessage(text);
+        }}
+        placeholder={"Aa"}
+        placeholderTextColor={"grey"}
+    />
+</View>
+```
+To this:
+```tsx
 <View style={styles.footer}>
     <TextInput
         style={styles.newMessageInput}
@@ -208,8 +233,10 @@ const submitNewMessage = () => {
         </Text>
     </Pressable>
 </View>
+```
 
-// Lastly, some styling to present this on the screen
+10. And lastly, add styling for the new submit button.
+```tsx
 footer: {
     padding: Constants.layout.padding,
 
@@ -235,7 +262,6 @@ submitNewMessageButtonText: {
     color: Constants.colors.primaryColorText
 }
 ```
-
 ...
 
 Now for the real test to see if everything works.
