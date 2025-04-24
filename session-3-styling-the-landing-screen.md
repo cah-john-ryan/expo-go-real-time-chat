@@ -196,7 +196,7 @@ To this:
     alert(`Continue pressed. Current userName: ${userName}`)
   }}
 >
-  <Text>Continue</Text>
+  <Text style={styles.continueButtonText}>Continue</Text>
 </Pressable>
 ```
 Now this screen has some basic styling applied.
