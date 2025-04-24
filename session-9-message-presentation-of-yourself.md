@@ -3,11 +3,15 @@
 
 In most chat applications, your own messages are presented in a manner that is different than messages from other people.  In this session we will create another component called `MessageFromSelf.tsx` to make your own messages stand apart from how the more generic `Messages.tsx` component.
 
-1. From the `/app/components` folder, rename the file "Message.tsx" to "MessageFromSomeoneElse.tsx".
+1. Create a new `/app/components/message` folder.
 
-2. From the `/app/components` folder, create a new file called "MessageFromSelf.tsx".
+2. From the `/app/components` folder, rename the file "Message.tsx" to "MessageFromSomeoneElse.tsx".
 
-3. Paste this into the new `/app/components/MessageFromSelf.tsx` file.
+3. From the `/app/components` folder, create a new file called "MessageFromSelf.tsx".
+
+4. Move the "MessageFromSomeoneElse.tsx" & "MessageFromSelf.tsx" to the `/app/components/message` folder.
+
+3. Paste this into the new `/app/components/message/MessageFromSelf.tsx` file.
 ```tsx
 import { StyleSheet, Text, View } from "react-native";
 import MessageObject from "@/app/objects/MessageObject";
@@ -31,7 +35,7 @@ export default function MessageFromSelf({message}: Readonly<Props>) {
 const styles = StyleSheet.create({
     container: {
         display: "flex",
-        flexDirection: "row-reverse",
+        flexDirection: "row-reverse", // This will make messages from self appear on the right
     },
     messageContainer: {
         flexBasis: "90%"
@@ -39,7 +43,9 @@ const styles = StyleSheet.create({
     messageTextContainer: {
         borderRadius: Constants.layout.borderRadius,
         padding: Constants.layout.padding,
-        backgroundColor: Constants.colors.primaryColor,
+
+        // Have messages from self stand out using the primary color of our app.
+        backgroundColor: Constants.colors.primaryColor, 
         color: Constants.colors.primaryColorText
     },
 });
@@ -49,8 +55,8 @@ const styles = StyleSheet.create({
 
 4. Paste this into the new `/app/components/Message.tsx` file.
 ```tsx
-import MessageFromSomeoneElse from "@/app/components/MessageFromSomeoneElse";
-import MessageFromSelf from "@/app/components/MessageFromSelf";
+import MessageFromSomeoneElse from "@/app/components/message/MessageFromSomeoneElse";
+import MessageFromSelf from "@/app/components/message/MessageFromSelf";
 import UserData from "@/app/objects/UserData";
 import MessageObject from "@/app/objects/MessageObject";
 
@@ -60,7 +66,7 @@ type MessageHandlerProps = {
     userDataForMessage: UserData | undefined;
 }
 export default function Message({userDataForSelf, message, userDataForMessage}: Readonly<MessageHandlerProps>) {
-    if (message.who === userDataForSelf.key) {
+    if (message.who === userDataForSelf?.key) {
         return (
             <MessageFromSelf message={message} />
         );
@@ -79,6 +85,9 @@ export default function Message({userDataForSelf, message, userDataForMessage}: 
 
 5. Update the below content as described:
 ```tsx
+// Make sure that this is still imported at the top
+import Message from "@/app/components/Message";
+
 // *Adjust* this line which is found just below the Chat() function declaration
 // You will be adding userDataForSelf here.
 const { userDataForSelf, userDataListing } = useFirebaseUserData(userKey);
@@ -113,6 +122,14 @@ You should now see messages for yourself and messages for other people displayed
 > [MessageFromSomeoneElse.tsx file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/components/MessageFromSomeoneElse.tsx)
 >
 > [chat.tsx file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
+
+
+6. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+7. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-9-message-presentation-of-yourself done"
+```
 
 ### SESSION COMPLETE
 
