@@ -69,7 +69,7 @@ const [userName, setUserName] = useState<string>('');
 </Pressable>
 ```
 
-11. You should see a red squiggly line below "TextInput" as Visual Studio Code does not know what this element is.  Hover your mouse over `<TextInput` and press `Control` + `.`.  This should update the `import` statement at the top of the file to tell Visual Studio Code where this element comes from.  There will be several other elements with these red squiggly marks that needs similar treatment.  
+11. You should see a red squiggly line below "useState", "TextInput", and "Pressable" as Visual Studio Code does not know what this element is.  Hover your mouse over `useState` and press `Control` + `.`.  This should update the `import` statement at the top of the file to tell Visual Studio Code where this element comes from.  Repeat this for each item in this file that has these red squiggly lines.  
 
 Once done, the top of the file should change from this:
 ```tsx
