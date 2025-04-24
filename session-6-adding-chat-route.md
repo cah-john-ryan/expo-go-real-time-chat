@@ -52,10 +52,10 @@ import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
 import { Href, useRouter } from "expo-router";
 
 export default function Index() {
-  const [userName, setUserName] = useState<string>('');
-  const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
   // Now add this here so that you have the Expo Go router available.
   const router = useRouter();
+  const [userName, setUserName] = useState<string>('');
+  const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
   
   const storeUserName = async () => {
       if (!userName) {
@@ -100,6 +100,20 @@ export default function Chat() {
 Notice the `useLocalSearchParams` from "expo-router".  With this, we can retreive the `userKey` passed from the landing screen we worked on earlier.
 
 Now when you enter a user name on the landing screen and click on the Continue button, you should be taken to this new chat screen and your Firebase userKey should be identified.
+
+> [!NOTE] 
+> You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
+>
+> [index.tsx file for session 6](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-6-adding-chat-route/expo-go-real-time-chat/app/index.tsx)
+>
+> [chat.tsx file for session 6](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-6-adding-chat-route/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
+
+18. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+19. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-6-adding-chat-route done"
+```
 
 ### SESSION COMPLETE
 
