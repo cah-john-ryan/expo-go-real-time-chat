@@ -47,7 +47,7 @@ expo-go-real-time-chat
 ```
 cd expo-go-real-time-chat
 ```
-8. Type the command below to support connectivity to your phone with Cardinal's guest WiFi
+8. (This step is only needed if running your computer on Cardinal's guest WiFi) Type the command below to support connectivity using tunneling.
 ```
 npm install @expo/ngrok
 ```
