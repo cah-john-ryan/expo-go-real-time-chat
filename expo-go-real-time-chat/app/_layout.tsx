@@ -13,6 +13,7 @@ export default function RootLayout() {
   }}
     >
       <Stack.Screen name="index" options={{title: 'Setup User Account'}}/>
+      <Stack.Screen name="[userKey]/chat" options={{title: 'Technology Camp Chat'}}/>
     </Stack>
   );
 }

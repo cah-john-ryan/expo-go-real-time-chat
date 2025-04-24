@@ -2,10 +2,14 @@ import { useState } from "react";
 import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 import Constants from "@/app/constants";
 import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
+// Add this to your imports.
+import { Href, useRouter } from "expo-router";
 
 export default function Index() {
   const [userName, setUserName] = useState<string>('');
   const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
+  // Now add this here so that you have the Expo Go router available.
+  const router = useRouter();
   
   const storeUserName = async () => {
       if (!userName) {
@@ -19,8 +23,10 @@ export default function Index() {
       } else {
           userData = await storeNewUserData(userName);
       }
-      alert(`Continue pressed. Current userKey in Firebase is: ${userData.key}`);
-      // In the next session we will have the application change to a new chat screen with this user information.
+      // Add this here replacing what was there before.
+      // This will have this screen transition to the chat screen/route when the userName is identified.
+      const homeRoute = `/${userData.key}/chat` as Href;
+      router.replace(homeRoute);
   };
   
   return (
