@@ -47,12 +47,16 @@ expo-go-real-time-chat
 ```
 cd expo-go-real-time-chat
 ```
-8. Type the command below to run the application in its initial state.
+8. Type the command below to support connectivity to your phone with Cardinal's guest WiFi
+```
+npm install @expo/ngrok
+```
+9. Type the command below to run the application in its initial state.
 ```
 npx expo start --tunnel
 ```
-9. You should see a QR code displayed on the screen, scan this with your phone's camera to run this application on your phone.
-10. Press the `w` key to run the application in your Google Chrome browser.  Once pressed, the browser should automatically appear with the application up and running.
+10. You should see a QR code displayed on the screen, scan this with your phone's camera to run this application on your phone.
+11. Press the `w` key to run the application in your Google Chrome browser.  Once pressed, the browser should automatically appear with the application up and running.
 
 You should now have the default template up and running on your computer as well as your phone.
 
