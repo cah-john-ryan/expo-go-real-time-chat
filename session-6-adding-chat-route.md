@@ -27,7 +27,7 @@ Your application folder structure should look like this now:
 import { Href, useRouter } from "expo-router";
 ```
 
-7. Add the Expo Go router to this component by adding the below line:
+7. Add the Expo Go router to this component by adding the below line below the Index() function declaration:
 ```tsx
 const router = useRouter();
 ```
@@ -41,6 +41,40 @@ With this:
 ```tsx
 const homeRoute = `/${userData.key}/chat` as Href;
 router.replace(homeRoute);
+```
+The result should look like this: 
+```tsx
+import { useState } from "react";
+import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import Constants from "@/app/constants";
+import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
+// Add this to your imports.
+import { Href, useRouter } from "expo-router";
+
+export default function Index() {
+  const [userName, setUserName] = useState<string>('');
+  const {findByUserName, storeNewUserData} = useFirebaseUserData(null);
+  // Now add this here so that you have the Expo Go router available.
+  const router = useRouter();
+  
+  const storeUserName = async () => {
+      if (!userName) {
+          return;
+      }
+      const existingUserData = findByUserName(userName);
+      let userData;
+      if (existingUserData) {
+          console.log(`The user name ${userName} already exists.  Assuming identity of that user. (userKey: ${existingUserData.key})`);
+          userData = existingUserData;
+      } else {
+          userData = await storeNewUserData(userName);
+      }
+      // Add this here replacing what was there before.
+      // This will have this screen transition to the chat screen/route when the userName is identified.
+      const homeRoute = `/${userData.key}/chat` as Href;
+      router.replace(homeRoute);
+  };
+...
 ```
 
 That should be it for the landing screen.  Let's define the `/app/[userKey]/chat.tsx` component for the application.
