@@ -146,7 +146,7 @@ export default function Index() {
 }
 ```
 
-You now have a screen where someone can enter a user name that they desire.  It is not very pretty but it is functional.
+You now have a screen where someone can enter a user name that they desire.  It is not very pretty but it is functional.  In the next session we will work on improving the appearance of this screen.
 
 ### SESSION COMPLETE
 
