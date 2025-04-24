@@ -40,4 +40,11 @@ export default function Index() {
 
 That should take care of that annoyance.  Go ahead and reopen the app on your phone and you should see that the chat screen comes right up without needing to re-enter your user name.
 
+2. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+3. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-6b-skip-landing-page done"
+```
+
 ### SESSION COMPLETE
