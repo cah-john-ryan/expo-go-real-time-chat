@@ -41,13 +41,15 @@ const app = initializeApp(firebaseConfigSecrets);
 
 export default app;
 ```
+5. You will find a file named "firebaseConfigSecrets.js" in the Documents folder of your computer.  Copy this file into this project to where it will be alongside the existing `/firebaseConfig.js` file.
+(This file contains the secrets that you need in order to connect to a Firebase instance I have setup beforehand.)
 
-5. Open the below link in your browser.
+6. Open the below link in your browser.
 https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/app/imports.zip
 
-6. Download this .zip file.
+7. Download this .zip file.
 
-7. Unzip the downloaded imports.zip file.
+8. Unzip the downloaded imports.zip file.
 
 9. Copy and paste the contents of the unzipped file to your `/app` folder in this project.
 
@@ -58,8 +60,6 @@ https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/e
 firebaseConfigSecrets.js
 ```
 
-12. You will find a file named "firebaseConfigSecrets.js" in the Documents folder of your computer.  Copy this file into this project to where it will be alongside the existing `/firebaseConfig.js` file.
-This file contains the secrets that you need in order to connect to a Firebase instance I have setup beforehand.
 
 13. Open the `/app/index.tsx` file.
 
