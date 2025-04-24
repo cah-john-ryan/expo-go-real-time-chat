@@ -268,9 +268,9 @@ submitNewMessageButtonText: {
 
 Now for the real test to see if everything works.
 
-9. Enter a new message into the input at the bottom of the screen stating who you are.
+11. Enter a new message into the input at the bottom of the screen stating who you are.
 
-10. Click the submit button.
+12. Click the submit button.
 
 Did you see your new message appear in the message listing?
 
@@ -281,6 +281,13 @@ You have completed a milestone for today.
 > You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
 >
 > [chat.tsx file for session 7](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-7-chat-screen-layout-and-initial-setup/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
+
+13. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+14. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-7-chat-screen-layout-and-initial-setup done"
+```
 
 ### SESSION COMPLETE
 
