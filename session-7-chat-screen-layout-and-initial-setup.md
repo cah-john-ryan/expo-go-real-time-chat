@@ -79,6 +79,7 @@ const styles = StyleSheet.create({
 import { StyleSheet, Text, View } from "react-native";
 import {useLocalSearchParams} from "expo-router";
 import Constants from "@/app/constants";
+// Add this import
 import useFirebaseMessages from "@/app/hooks/useFirebaseMessages";
 
 export default function Chat() {
