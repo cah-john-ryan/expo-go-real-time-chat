@@ -49,7 +49,7 @@ cd expo-go-real-time-chat
 ```
 8. Type the command below to run the application in its initial state.
 ```
-npx expo start
+npx expo start --tunnel
 ```
 9. You should see a QR code displayed on the screen, scan this with your phone's camera to run this application on your phone.
 10. Press the `w` key to run the application in your Google Chrome browser.  Once pressed, the browser should automatically appear with the application up and running.
