@@ -180,26 +180,24 @@ const styles = StyleSheet.create({
 And update the `<TextInput>` element to use this style
 From this:
 ```tsx
-<TextInput
-    value={userName}
-    onChangeText={(text) => {
-        setUserName(text);
-    }}
-    placeholder={"Enter your desired user name here"}
-    placeholderTextColor={"grey"}
-/>
+<Pressable
+  onPress={() => {
+    alert(`Continue pressed. Current userName: ${userName}`)
+  }}
+>
+  <Text>Continue</Text>
+</Pressable>
 ```
 To this:
 ```tsx
-<TextInput
-    style={styles.userNameInput}
-    value={userName}
-    onChangeText={(text) => {
-        setUserName(text);
-    }}
-    placeholder={"Enter your desired user name here"}
-    placeholderTextColor={"grey"}
-/>
+<Pressable
+  style={styles.continueButton}
+  onPress={() => {
+    alert(`Continue pressed. Current userName: ${userName}`)
+  }}
+>
+  <Text>Continue</Text>
+</Pressable>
 ```
 Now this screen has some basic styling applied.
 
