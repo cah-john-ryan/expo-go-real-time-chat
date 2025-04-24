@@ -158,7 +158,7 @@ Add the below line to the top of this component.
 
 ...
 
-// In the styles section at the bottom of the file.
+// In the styles section at the bottom of the file add this section.
 newMessageInput: {
     borderWidth: 1,
     borderRadius: Constants.layout.borderRadius,
