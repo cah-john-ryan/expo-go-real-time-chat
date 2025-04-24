@@ -28,17 +28,26 @@ Reference on these installations:
 - https://react-native-async-storage.github.io/async-storage/docs/usage/
 - https://github.com/eugenehp/react-native-uuid#readme
 
-4. Open the below link in your browser.
-https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/firebaseConfig.js
+4. Create a new `/app/firebaseConfig.js` file and copy the contents of what you are seeing in the link from #4 to this file.
+```tsx
+import { initializeApp } from 'firebase/app';
+import firebaseConfigSecrets from './firebaseConfigSecrets';
 
-5. Create a new `/app/firebaseConfig.js` file and copy the contents of what you are seeing in the link from #4 to this file.
+console.debug('Setting up Firebase database');
+const app = initializeApp(firebaseConfigSecrets);
 
-6. Open the below link in your browser.
+// For more information on how to access Firebase in your project,
+// see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
+
+export default app;
+```
+
+5. Open the below link in your browser.
 https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/app/imports.zip
 
-7. Download this .zip file.
+6. Download this .zip file.
 
-8. Unzip the downloaded imports.zip file.
+7. Unzip the downloaded imports.zip file.
 
 9. Copy and paste the contents of the unzipped file to your `/app` folder in this project.
 
