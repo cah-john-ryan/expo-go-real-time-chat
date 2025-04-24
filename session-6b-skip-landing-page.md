@@ -48,3 +48,5 @@ git commit -m "session-6b-skip-landing-page done"
 ```
 
 ### SESSION COMPLETE
+
+Up next -> [Session 7 - Chat screen layout and initial setup](session-7-chat-screen-layout-and-initial-setup.md)

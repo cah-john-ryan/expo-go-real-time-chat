@@ -117,4 +117,4 @@ git commit -m "session-6-adding-chat-route done"
 
 ### SESSION COMPLETE
 
-Up next -> [Session 7 - Chat screen layout and initial setup](session-7-chat-screen-layout-and-initial-setup.md)
+Up next -> [Session 6b - Skip the landing page](session-6b-skip-landing-page.md)
