@@ -21,7 +21,7 @@ export default {
     padding: 10,
     borderRadius: 10,
   },
-  color: {
+  colors: {
     // I like the color green.  I am a big fan of Link from the Legend of Zelda.
     // Choose a color of your own preference here:
     // https://coolors.co/
