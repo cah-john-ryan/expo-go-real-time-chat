@@ -30,7 +30,7 @@ npx expo start
 
 7. In Visual Studio Code, find the component `/app/index.tsx` file.
 
-#### (Take a moment to explain what is present there)
+#### (Take a moment to explain what is present there.  Start with <View/> and then <Text/>.)
 
 8. Update the `<Text/>` element
 ```tsx
