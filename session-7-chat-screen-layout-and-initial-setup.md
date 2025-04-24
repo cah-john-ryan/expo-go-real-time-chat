@@ -121,6 +121,7 @@ const styles = StyleSheet.create({
         backgroundColor: Constants.colors.messageListingBackgroundColor,
         gap: Constants.layout.padding,
     },
+    // Add this styling so that each message is displayed in a message "bubble"
     message: {
         borderWidth: 1,
         borderRadius: Constants.layout.borderRadius,
