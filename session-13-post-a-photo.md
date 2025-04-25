@@ -62,7 +62,7 @@ Now, open the app to the chat screen and click on the camera IconButton.  You sh
 11. Copy the below commands and paste them into the command prompt window:
 ```
 git add .
-git commit -m "session-13-post-a-photo done"
+git commit -m "session-13-post-a-photo work in progress"
 ```
 
 We are going to replace the content of what is in the `/app/[userKey]/post-a-photo.tsx` file with the example code from the below website.
@@ -73,7 +73,7 @@ Before we do that though, we need to install the `expo-camera` library to help u
 
 12. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 
-13. From the command prompt window, enter the below command to run this application in it's initial state:
+13. From the command prompt window, enter the below command:
 ```
 npx expo install expo-camera
 ```
