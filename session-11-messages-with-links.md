@@ -16,111 +16,43 @@ https://github.com/joshswan/react-native-autolink
 npm install react-native-autolink
 ```
 
-3. Open the `app/components/MessageFromSelf.tsx` file.
+3. Open the `app/components/message/MessageFromSelf.tsx` file.
 
-4. Update from this:
+4. Update to this:
 ```tsx
-export default function MessageFromSelf({message}: Readonly<Props>) {
-    return (
-        <View>
-            <Text style={styles.messageTextContainer}>
-                {message.messageText}
-            </Text>
-        </View>
-    );
-}
+// Add this to the import section at the top
+import Autolink from "react-native-autolink";
 
-const styles = StyleSheet.create({
-    container: {
-        display: "flex",
-        flexDirection: "row-reverse",
-    },
-    messageContainer: {
-        flexBasis: "90%"
-    },
-    messageTextContainer: {
-        borderRadius: Constants.layout.borderRadius,
-        padding: Constants.layout.padding,
-        marginBottom: Constants.layout.padding,
-        backgroundColor: Constants.colors.primaryColor,
-        color: Constants.colors.primaryColorText
-    },
-});
-```
-To this:
-```tsx
-export default function MessageFromSelf({message}: Readonly<Props>) {
-    return (
-        <View>
-            <View style={styles.messageTextContainer}>
-                {/* Adding the Autolink component to handle this complexity */}
-                <Autolink 
-                    style={styles.messageText}
-                    text={message.messageText}
-                    email
-                    url
-                    phone="sms"
-                />
-            </View>
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({
-    container: {
-        display: "flex",
-        flexDirection: "row-reverse",
-    },
-    messageContainer: {
-        flexBasis: "90%"
-    },
-    messageTextContainer: {
-        borderRadius: Constants.layout.borderRadius,
-        padding: Constants.layout.padding,
-        marginBottom: Constants.layout.padding,
-        backgroundColor: Constants.colors.primaryColor
-    },
-    messageText: {
-        // Migrating this font color from messageTextContainer to where it is now passed into the Autolink component as that is where the text resides
-        color: Constants.colors.primaryColorText
-    }
-});
+// The new content for messageContainer
+<View style={styles.messageContainer}>
+    <Autolink 
+        style={styles.messageTextContainer}
+        text={message.messageText}
+        email
+        url
+        phone="sms"
+    />
+</View>
 ```
 
-5. Open the `/app/components/MessageFromSomeoneElse.tsx` file.
+5. Open the `/app/components/message/MessageFromSomeoneElse.tsx` file.
 
-6. Update from this:
+6. Update to this:
 ```tsx
-export default function MessageFromSomeoneElse({message, userDataForMessage}: Readonly<Props>) {
-    return (
-        <View>
-            <Text>{userDataForMessage?.userName}</Text>
-            <Text style={styles.messageTextContainer}>
-                {message.messageText}
-            </Text>
-        </View>
-    );
-}
-```
+// Add this to the import section at the top
+import Autolink from "react-native-autolink";
 
-To this:
-```tsx
-export default function MessageFromSomeoneElse({message, userDataForMessage}: Readonly<Props>) {
-    return (
-        <View>
-            <Text>{userDataForMessage?.userName}</Text>
-            <View style={styles.messageTextContainer}>
-                {/* Adding the Autolink component to handle this complexity */}
-                <Autolink 
-                    text={message.messageText}
-                    email
-                    url
-                    phone="sms"
-                />
-            </View>
-        </View>
-    );
-}
+// The new content for messageContainer
+<View style={styles.messageContainer}>
+    <Text>{userDataForMessage?.userName}</Text>
+    <Autolink 
+        style={styles.messageTextContainer}
+        text={message.messageText}
+        email
+        url
+        phone="sms"
+    />
+</View>
 ```
 
 Recheck the app and you should see links for apps and email addresses appear automatically in message on the screen.
@@ -133,6 +65,14 @@ If you look at the website for this `<AutoLink/>` component, there are several o
 > [MessageFromSelf.ts file for session 11](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-11-messages-with-links/expo-go-real-time-chat/app/components/MessageFromSelf.tsx)
 >
 > [MessageFromSomeoneElse.ts file for session 11](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-11-messages-with-links/expo-go-real-time-chat/app/components/MessageFromSomeoneElse.tsx)
+
+7. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+8. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-11-messages-with-links done"
+```
+9. Submit a message in the chat stating that you have completed this session.
 
 ### SESSION COMPLETE
 
