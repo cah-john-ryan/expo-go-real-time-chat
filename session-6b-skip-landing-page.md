@@ -47,8 +47,6 @@ git add .
 git commit -m "session-6b-skip-landing-page done"
 ```
 
-4. Submit a message in the chat stating your name and that you have completed this session.
-
 ### SESSION COMPLETE
 
 Up next -> [Session 7 - Chat screen layout and initial setup](session-7-chat-screen-layout-and-initial-setup.md)
