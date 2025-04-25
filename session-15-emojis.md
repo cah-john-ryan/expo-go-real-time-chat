@@ -151,4 +151,11 @@ export default function Message({userDataForSelf, message, userDataForMessage}: 
 >
 > [Message.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-15-emojis/expo-go-real-time-chat/app/components/Message.tsx)
 
+4. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
+5. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-15-emojis done"
+```
+
 ### SESSION COMPLETE
