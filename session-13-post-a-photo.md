@@ -194,6 +194,13 @@ return (
 
 This should now allow the Post A Photo screen to actually capture an image from your camera.
 
+16. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
+17. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-13-post-a-photo work in progress"
+```
+
 Let's refactor this a bit to use our common `<IconButton/>` component instead of those `<TouchableOpacity/>` components.
 
 16. Add the import to the top of the file.
