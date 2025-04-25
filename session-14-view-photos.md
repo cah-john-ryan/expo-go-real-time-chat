@@ -120,6 +120,8 @@ git add .
 git commit -m "session-14-view-photos done"
 ```
 
+8. Submit a message in the chat stating that you have completed this session.
+
 ### SESSION COMPLETE
 
 Up next -> [Session 15 - Emojis](session-15-emojis.md)

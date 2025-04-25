@@ -158,4 +158,6 @@ git add .
 git commit -m "session-15-emojis done"
 ```
 
+6. Submit a 👍 emoji message stating that you have completed this session.
+
 ### SESSION COMPLETE
