@@ -29,11 +29,13 @@ const navigateToPostAPhotoRoute = () => {
 />
 ```
 
-3. You should now see a new IconButton on the chat screen with a camera icon displayed.  Let's create the route for where clicking this button should take you.
+3. You should now see a new IconButton on the chat screen with a camera icon displayed.  If you click on it you will see that you are taken to a screen where Expo is telling you that this is an unmatched route.
 
-4. Open the `/app/_layout.tsx` file.
+Let's create the route for where clicking this button should take you.
 
-5. Update the content of this file to what is shown below:
+6. Open the `/app/_layout.tsx` file.
+
+7. Update the content of this file to what is shown below:
 ```tsx
 // Add this as a new screen to the `<Stack/>` component
 <Stack.Screen name="[userKey]/post-a-photo" options={{title: 'Post A Photo'}}/>
