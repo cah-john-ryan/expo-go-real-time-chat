@@ -5,6 +5,12 @@ import MessageObject from "@/app/objects/MessageObject";
 import MessageType from "@/app/objects/MessageType";
 import ImageFromSelf from "@/app/components/message/ImageFromSelf";
 import ImageFromSomeoneElse from "@/app/components/message/ImageFromSomeoneElse";
+import EmojiFromSelf from "@/app/components/message/EmojiFromSelf";
+import EmojiFromSomeoneElse from "@/app/components/message/EmojiFromSomeoneElse";
+
+function containsOnlyEmojis(str: string) {
+    return /^(\p{Extended_Pictographic})+$/u.test(str);
+}
 
 type MessageHandlerProps = {
     userDataForSelf: UserData;
@@ -12,6 +18,11 @@ type MessageHandlerProps = {
     userDataForMessage: UserData | undefined;
 }
 export default function Message({userDataForSelf, message, userDataForMessage}: Readonly<MessageHandlerProps>) {
+    if (message.who === userDataForSelf.key && message.messageType === MessageType.Text && containsOnlyEmojis(message.messageText)) {
+        return (
+            <EmojiFromSelf message={message} />
+        );
+    } 
     if (message.who === userDataForSelf.key && message.messageType === MessageType.Text) {
         return (
             <MessageFromSelf message={message} />
@@ -22,6 +33,14 @@ export default function Message({userDataForSelf, message, userDataForMessage}: 
             <ImageFromSelf message={message} />
         );
     }
+    if (message.who !== userDataForSelf.key && message.messageType === MessageType.Text && containsOnlyEmojis(message.messageText)) {
+        return (
+            <EmojiFromSomeoneElse
+                message={message}
+                userDataForMessage={userDataForMessage}
+            />
+        );
+    } 
     if (message.who !== userDataForSelf.key && message.messageType === MessageType.Text) {
         return (
             <MessageFromSomeoneElse
