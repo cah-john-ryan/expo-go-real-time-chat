@@ -1,13 +1,22 @@
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useRef, useState } from 'react';
-import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Button, Platform, StyleSheet, Text, View } from 'react-native';
 import Constants from "@/app/constants";
 import IconButton from '@/app/components/IconButton';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import useFirebaseMessages from '@/app/hooks/useFirebaseMessages';
+import useFirebaseUserData from '@/app/hooks/useFirebaseUserData';
+import MessageType from '@/app/objects/MessageType';
+import * as FileSystem from 'expo-file-system';
 
 export default function PostAPhoto() {
   const ref = useRef<CameraView>(null);
   const [facing, setFacing] = useState<CameraType>('back');
   const [permission, requestPermission] = useCameraPermissions();
+  const { userKey } = useLocalSearchParams();
+  const { userDataForSelf } = useFirebaseUserData(userKey);
+  const { storeMessage } = useFirebaseMessages();
+  const router = useRouter();
 
   if (!permission) {
     // Camera permissions are still loading.
@@ -30,10 +39,15 @@ export default function PostAPhoto() {
 
   const takePicture = async () => {
     const photo = await ref.current?.takePictureAsync();
-    if (photo?.uri) {
-        alert("Photo data obtained!  Now we need to do something with this data.");
-        console.log("Photo data obtained!", photo.uri);
+    if (photo?.uri && userDataForSelf) {
+        if (Platform.OS === 'web') {
+            storeMessage(userDataForSelf.key, photo.uri, MessageType.Image);
+        } else {
+            const base64Img = await FileSystem.readAsStringAsync(photo.uri, { encoding: FileSystem.EncodingType?.Base64 });
+            storeMessage(userDataForSelf.key, "data:image/png;base64,"+base64Img, MessageType.Image);
+        }
     }
+    router.back();
   };
 
   return (
