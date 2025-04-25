@@ -59,8 +59,8 @@ messageListing: {
 
 4. Open both the `/app/components/MessageFromSelf.tsx` and the `/app/components/MessageFromSomeoneElse.tsx` components.  Add the below line to their styling:
 ```tsx
-    // inside the "container" styling
-    marginBottom: Constants.layout.padding,
+// inside the "container" styling
+marginBottom: Constants.layout.padding,
 ```
 
 Now the chat conversation should be displaying properly when content runs off the screen and instead should be scrollable.
