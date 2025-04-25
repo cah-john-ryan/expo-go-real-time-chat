@@ -203,13 +203,13 @@ git commit -m "session-13-post-a-photo work in progress"
 
 Let's refactor this a bit to use our common `<IconButton/>` component instead of those `<TouchableOpacity/>` components.
 
-16. Add the import to the top of the file.
+18. Add the import to the top of the file.
 ```tsx
 import Constants from "@/app/constants";
 import IconButton from '@/app/components/IconButton';
 ```
 
-17. Update the bottom of this component from this:
+19. Update the bottom of this component from this:
 ```tsx
 return (
     <View style={styles.container}>
@@ -273,9 +273,16 @@ To this:
 
 Now the buttons at the bottom should be using our common component.
 
+20. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
+21. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-13-post-a-photo work in progress"
+```
+
 Lastly, let's update the `takePicture()` function so that it actually saves the image as a new message for our chat.
 
-18. Update this file again with these new imports
+22. Update this file again with these new imports
 ```tsx
 // Add Platform here to this import.
 import { Button, Platform, StyleSheet, Text, View } from 'react-native';
@@ -325,6 +332,12 @@ THIS IS ACTUALLY GOOD.  That big block of text is actually image data that the c
 >
 > [post-a-photo.tsx file for session 13](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-13-post-a-photo/expo-go-real-time-chat/app/%5BuserKey%5D/post-a-photo.tsx)
 
+23. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
+24. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-13-post-a-photo done"
+```
 ### SESSION COMPLETE
 
 Up next -> [Session 14 - View photos](session-14-view-photos.md)
