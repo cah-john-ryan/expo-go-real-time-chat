@@ -131,6 +131,14 @@ git add .
 git commit -m "session-9-message-presentation-of-yourself done"
 ```
 
+8. Submit a message in the chat stating that you have completed this session.
+
+### SESSION COMPLETE
+
+Up next -> [Session 10 - Presentation adjustments with the help of React Native](session-10-presentation-adjustments.md)
+
+
+
 ### SESSION COMPLETE
 
 Up next -> [Session 10 - Presentation adjustments with the help of React Native](session-10-presentation-adjustments.md)
