@@ -63,8 +63,8 @@ Now we need to update the generic `<Message/>` component to render the right typ
 ```tsx
 // Add these imports
 import MessageType from "@/app/objects/MessageType";
-import ImageFromSelf from "@/app/components/ImageFromSelf";
-import ImageFromSomeoneElse from "@/app/components/ImageFromSomeoneElse";
+import ImageFromSelf from "@/app/components/message/ImageFromSelf";
+import ImageFromSomeoneElse from "@/app/components/message/ImageFromSomeoneElse";
 ```
 
 And then update the whole `Message()` function:
