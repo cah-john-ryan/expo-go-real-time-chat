@@ -1,6 +1,7 @@
 # Real-time chat with Expo Go and React Native
 ## Session 10 - Presentation adjustments with the help of React Native
 
+### Problem 1 - Scrolling not implemented
 If you the conversation in the chat has grown larger than your screen or if you have tried running this application on your phone then you will notice that there are some presentation concerns.  There is no ability to scroll/swipe up and down through the chat conversation and the messages overflow and overlap the new message input.
 
 We are going to let React Native solve this issue for us by using their `<FlatList/>` component.
@@ -64,6 +65,8 @@ marginBottom: Constants.layout.padding,
 ```
 
 Now the chat conversation should be displaying properly when content runs off the screen and instead should be scrollable.
+
+### Problem 2 - When using a phone, the software keyboard is hiding the new message input
 
 5. If you open this application on your phone, you will notice that when touching the new message input, the software keyboard appears and hides the bottom half of the screen. To address this we will create a new component that uses React Native's `<KeyboardAvoidingView/>` component.  
 
@@ -134,6 +137,13 @@ Now these display issues should be resolved and we can add more features to this
 > You can compare your changes here against the below file for reference if you are running into any challenges in completing this session.
 >
 > [chat.ts file for session 10](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-10-presentation-adjustments/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
+
+10. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+11. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-10-presentation-adjustments done"
+```
 
 ### SESSION COMPLETE
 
