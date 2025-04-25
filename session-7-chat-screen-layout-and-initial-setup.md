@@ -289,6 +289,8 @@ git add .
 git commit -m "session-7-chat-screen-layout-and-initial-setup done"
 ```
 
+15. Submit a message in the chat stating your name and that you have completed this session.
+
 ### SESSION COMPLETE
 
 Up next -> [Session 8 - Message Presentation](session-8-message-presentation.md)
