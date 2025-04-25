@@ -338,6 +338,9 @@ THIS IS ACTUALLY GOOD.  That big block of text is actually image data that the c
 git add .
 git commit -m "session-13-post-a-photo done"
 ```
+
+I do not need you to post a message stating that you are done with this session.  The photo you just posted will take care of that.
+
 ### SESSION COMPLETE
 
 Up next -> [Session 14 - View photos](session-14-view-photos.md)
