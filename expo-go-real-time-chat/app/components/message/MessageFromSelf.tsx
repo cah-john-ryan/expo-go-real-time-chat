@@ -21,6 +21,7 @@ const styles = StyleSheet.create({
     container: {
         display: "flex",
         flexDirection: "row-reverse", // This will make messages from self appear on the right
+        marginBottom: Constants.layout.padding,
     },
     messageContainer: {
         flexBasis: "90%"

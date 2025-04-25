@@ -27,6 +27,7 @@ const styles = StyleSheet.create({
     container: {
         display: "flex",
         flexDirection: "row",
+        marginBottom: Constants.layout.padding,
     },
     messageContainer: {
         flexBasis: "90%"
