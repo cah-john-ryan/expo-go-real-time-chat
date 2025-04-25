@@ -1,4 +1,4 @@
-import { FlatList, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { FlatList, StyleSheet, Text, TextInput, View } from "react-native";
 import {useLocalSearchParams} from "expo-router";
 import Constants from "@/app/constants";
 // Add this import
@@ -7,7 +7,8 @@ import { useState } from "react";
 import MessageType from "@/app/objects/MessageType";
 import Message from "@/app/components/Message";
 import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
-import KeyboardAvoidingContainer from "../components/KeyboardAvoidingContainer";
+import KeyboardAvoidingContainer from "@/app/components/KeyboardAvoidingContainer";
+import IconButton from "@/app/components/IconButton";
 
 export default function Chat() {
     const [ newMessage, setNewMessage ] = useState<string>("");
@@ -63,14 +64,12 @@ export default function Chat() {
                     placeholderTextColor={"grey"}
                 />
 
-                <Pressable
-                    style={styles.submitNewMessageButton}
-                    onPress={submitNewMessage}
-                >
-                    <Text style={styles.submitNewMessageButtonText}>
-                        Submit
-                    </Text>
-                </Pressable>
+                {newMessage ? (
+                    <IconButton 
+                        name="arrow-up"
+                        onPress={submitNewMessage}
+                    />
+                ) : null}
             </View>
         </KeyboardAvoidingContainer>
     );
@@ -91,14 +90,5 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: Constants.layout.borderRadius,
         padding: Constants.layout.padding,
-    },
-    submitNewMessageButton: {
-        borderRadius: Constants.layout.borderRadius,
-        padding: Constants.layout.padding,
-        alignItems: "center",
-        backgroundColor: Constants.colors.primaryColor
-    },
-    submitNewMessageButtonText: {
-        color: Constants.colors.primaryColorText
     }
 });
