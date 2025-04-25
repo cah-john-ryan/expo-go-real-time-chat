@@ -136,9 +136,3 @@ git commit -m "session-9-message-presentation-of-yourself done"
 ### SESSION COMPLETE
 
 Up next -> [Session 10 - Presentation adjustments with the help of React Native](session-10-presentation-adjustments.md)
-
-
-
-### SESSION COMPLETE
-
-Up next -> [Session 10 - Presentation adjustments with the help of React Native](session-10-presentation-adjustments.md)
