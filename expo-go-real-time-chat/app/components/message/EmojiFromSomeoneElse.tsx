@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import UserData from "@/app/objects/UserData";
 import MessageObject from "@/app/objects/MessageObject";
+import Text from "@/app/components/generic/Text";
 
 type Props = {
     message: MessageObject;

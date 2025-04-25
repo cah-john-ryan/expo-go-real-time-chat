@@ -1,9 +1,12 @@
 import { useCallback, useState } from "react";
-import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+import { Pressable, StyleSheet, View } from "react-native";
 import Constants from "@/app/constants";
 import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
 import useLocalStorage from "@/app/hooks/useLocalStorage";
 import { Href, useFocusEffect, useRouter } from "expo-router";
+import Text from "@/app/components/generic/Text";
+import TextInput from "@/app/components/generic/InputText";
+import TextButton from "@/app/components/generic/TextButton";
 
 export default function Index() {
   const router = useRouter();
@@ -57,12 +60,8 @@ export default function Index() {
           placeholderTextColor={"grey"}
       />
 
-      <Pressable
-          style={styles.continueButton}
-          onPress={storeUserName}
-      >
-          <Text style={styles.continueButtonText}>Continue</Text>
-      </Pressable>
+
+      <TextButton onPress={storeUserName} text={"Continue"}/>
     </View>
   );
 }
@@ -82,14 +81,4 @@ const styles = StyleSheet.create({
     borderRadius: Constants.layout.borderRadius,
     padding: Constants.layout.padding,
   },
-  continueButton: {
-    width: "100%",
-    borderRadius: Constants.layout.borderRadius,
-    padding: Constants.layout.padding,
-    alignItems: "center",
-    backgroundColor: Constants.colors.primaryColor,
-  },
-  continueButtonText: {
-      color: Constants.colors.primaryColorText
-  }
 });

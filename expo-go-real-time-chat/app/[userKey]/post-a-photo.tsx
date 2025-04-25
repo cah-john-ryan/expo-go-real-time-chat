@@ -1,13 +1,14 @@
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useRef, useState } from 'react';
-import { Button, Platform, StyleSheet, Text, View } from 'react-native';
+import { Button, Platform, StyleSheet, View } from 'react-native';
 import Constants from "@/app/constants";
-import IconButton from '@/app/components/IconButton';
+import IconButton from '@/app/components/generic/IconButton';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 import useFirebaseMessages from '@/app/hooks/useFirebaseMessages';
 import useFirebaseUserData from '@/app/hooks/useFirebaseUserData';
 import MessageType from '@/app/objects/MessageType';
 import * as FileSystem from 'expo-file-system';
+import Text from '@/app/components/generic/Text';
 
 export default function PostAPhoto() {
   const ref = useRef<CameraView>(null);

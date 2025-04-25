@@ -1,4 +1,4 @@
-import { FlatList, StyleSheet, Text, TextInput, View } from "react-native";
+import { FlatList, StyleSheet, View } from "react-native";
 import { Href, useLocalSearchParams, useRouter } from "expo-router";
 import Constants from "@/app/constants";
 // Add this import
@@ -7,8 +7,10 @@ import { useState } from "react";
 import MessageType from "@/app/objects/MessageType";
 import Message from "@/app/components/Message";
 import useFirebaseUserData from "@/app/hooks/useFirebaseUserData";
-import KeyboardAvoidingContainer from "@/app/components/KeyboardAvoidingContainer";
-import IconButton from "@/app/components/IconButton";
+import KeyboardAvoidingContainer from "@/app/components/generic/KeyboardAvoidingContainer";
+import IconButton from "@/app/components/generic/IconButton";
+import Text from "@/app/components/generic/Text";
+import TextInput from "@/app/components/generic/InputText";
 
 export default function Chat() {
     const [ newMessage, setNewMessage ] = useState<string>("");
