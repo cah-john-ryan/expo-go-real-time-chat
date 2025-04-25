@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet, Text, TextInput, View } from "react-native";
-import {useLocalSearchParams} from "expo-router";
+import { Href, useLocalSearchParams, useRouter } from "expo-router";
 import Constants from "@/app/constants";
 // Add this import
 import useFirebaseMessages from "@/app/hooks/useFirebaseMessages";
@@ -15,6 +15,7 @@ export default function Chat() {
     const { messages, storeMessage } = useFirebaseMessages();
     const { userKey } = useLocalSearchParams();
     const { userDataForSelf, userDataListing } = useFirebaseUserData(userKey);
+    const router = useRouter();
 
     // And add this as well to handle rendering the data we are dependant on is not yet defined
     if (!messages || !userDataForSelf) {
@@ -38,6 +39,11 @@ export default function Chat() {
         }
     };
 
+    const navigateToPostAPhotoRoute = () => {
+        const postAPhotoRoute = `/${userKey}/post-a-photo` as Href;
+        router.navigate(postAPhotoRoute);
+    };
+
     return (
         <KeyboardAvoidingContainer>
             <FlatList
@@ -54,6 +60,11 @@ export default function Chat() {
                 }
             />
             <View style={styles.footer}>
+                <IconButton 
+                    name="camera"
+                    onPress={navigateToPostAPhotoRoute}
+                />
+
                 <TextInput
                     style={styles.newMessageInput}
                     value={newMessage}
