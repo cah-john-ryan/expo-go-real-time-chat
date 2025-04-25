@@ -83,6 +83,14 @@ import { Pressable, Text, TextInput, View } from "react-native";
 
 12. Lastly, the header for this screen says "Index" which is not very helpful.  Find the file `/app/_layout.tsx` and open it.
 
+> [!NOTE] 
+> The Core Components for Expo Go can be found via the link below:
+>
+> https://docs.expo.dev/versions/latest/
+>
+> We will be working with Expo Go's `<Stack/>` component next.
+> https://docs.expo.dev/router/advanced/stack/
+
 Change what you find there from this:
 ```tsx
 import { Stack } from "expo-router";
