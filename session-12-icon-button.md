@@ -114,6 +114,14 @@ This should make the submit IconButton appear only when there is a new message b
 >
 > [chat.tsx file for session 12](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-12-icon-button/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
 
+6. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+7. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-12-icon-button done"
+```
+8. Submit a message in the chat stating that you have completed this session.
+
 ### SESSION COMPLETE
 
 Up next -> [Session 13 - Post a photo](session-13-post-a-photo.md)
