@@ -5,18 +5,11 @@ Now that we are able to post messages with photos we need to update our chat app
 
 To do this, we will need to copy both of the below components we already have into new files.
 
-1. Create the new folder `app/components/message/`.
+1. Make a copy of the `app/components/message/MessageFromSelf.tsx` file.  Call the new file `app/components/message/ImageFromSelf.tsx`.
 
-2. In Visual Studio Code, drag the `app/components/MessageFromSelf.tsx` and `app/components/MessageFromSomeoneElse.tsx` files into `app/components/message/` folder.
+2. Make a copy of the `app/components/message/MessageFromSomeoneElse.tsx` file.  Call the new file `app/components/message/ImageFromSomeoneElse.tsx`.
 
-- `app/components/MessageFromSelf.tsx` --> `app/components/message/MessageFromSelf.tsx`
-- `app/components/MessageFromSomeoneElse.tsx` -->`app/components/message/MessageFromSomeoneElse.tsx`
-
-3. Make a copy of the `app/components/message/MessageFromSelf.tsx` file.  Call the new file `app/components/message/ImageFromSelf.tsx`.
-
-4. Make a copy of the `app/components/message/MessageFromSomeoneElse.tsx` file.  Call the new file `app/components/message/ImageFromSomeoneElse.tsx`.
-
-5. Open the file `app/components/ImageFromSelf.tsx`.
+3. Open the file `app/components/ImageFromSelf.tsx`.
 ```tsx
 // Add Image to this import
 import { Image, StyleSheet, View } from "react-native";
@@ -25,22 +18,7 @@ import { Image, StyleSheet, View } from "react-native";
 import Autolink from 'react-native-autolink';
 ```
 
-Replace this:
-```tsx
-<View style={styles.messageContainer}>
-    <View style={styles.messageTextContainer}>
-        <Autolink 
-            style={styles.messageText}
-            text={message.messageText}
-            email
-            url
-            phone="sms"
-        />
-    </View>
-</View>
-```
-
-With this:
+Replace the "messageContainer" `<View/>` element with this:
 ```tsx
 <View style={styles.messageContainer}>
     <Image source={{uri: message.messageText}} style={[styles.messageTextContainer, styles.imageContainer]}/>
@@ -51,34 +29,19 @@ And lastly add this to the `styles` section at the bottom:
 ```tsx
 imageContainer: {
     height: 200,
-}
+},
 ```
 
-6. Open the file `app/components/ImageFromSomeoneElse.tsx`.
+4. Open the file `app/components/ImageFromSomeoneElse.tsx`.
 ```tsx
 // Add Image to this import
-import { Image, StyleSheet, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 
 // Remove this as we won't need it here
 import Autolink from 'react-native-autolink';
 ```
 
-Replace this:
-```tsx
-<View style={styles.messageContainer}>
-    <Text>{userDataForMessage?.userName}</Text>
-    <View style={styles.messageTextContainer}>
-        <Autolink 
-            text={message.messageText}
-            email
-            url
-            phone="sms"
-        />
-    </View>
-</View>
-```
-
-With this:
+Replace the "messageContainer" `<View/>` element with this:
 ```tsx
 <View style={styles.messageContainer}>
     <Text>{userDataForMessage?.userName}</Text>
@@ -90,13 +53,13 @@ And lastly add this to the `styles` section at the bottom:
 ```tsx
 imageContainer: {
     height: 200,
-}
+},
 ```
 
 That should do it for the new image components.
 Now we need to update the generic `<Message/>` component to render the right type of message in the right circumstance.
 
-7. Edit the `app/components/Message.tsx` file.
+5. Edit the `app/components/Message.tsx` file.
 ```tsx
 // Add these imports
 import MessageType from "@/app/objects/MessageType";
