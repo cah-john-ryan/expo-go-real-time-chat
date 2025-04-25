@@ -113,6 +113,13 @@ Completing these last two sessions is quite and accomplishment.  I am impressed!
 >
 > [Message.tsx file for session 14](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-14-view-photos/expo-go-real-time-chat/app/components/Message.tsx)
 
+6. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
+7. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-14-view-photos done"
+```
+
 ### SESSION COMPLETE
 
 Up next -> [Session 15 - Emojis](session-15-emojis.md)
