@@ -59,6 +59,7 @@ messageListing: {
 
 4. Open both the `/app/components/MessageFromSelf.tsx` and the `/app/components/MessageFromSomeoneElse.tsx` components.  Add the below line to their styling:
 ```tsx
+    // inside the "container" styling
     marginBottom: Constants.layout.padding,
 ```
 
