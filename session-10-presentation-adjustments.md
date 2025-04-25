@@ -145,6 +145,8 @@ git add .
 git commit -m "session-10-presentation-adjustments done"
 ```
 
+12. Submit a message in the chat stating that you have completed this session.
+
 ### SESSION COMPLETE
 
 Up next -> [Session 11 - Add the ability to embed links for other applications and email addresses in messages](session-11-messages-with-links.md)
