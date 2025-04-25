@@ -41,9 +41,9 @@ Let's create the route for where clicking this button should take you.
 <Stack.Screen name="[userKey]/post-a-photo" options={{title: 'Post A Photo'}}/>
 ```
 
-6. Create a new `/app/[userKey]/post-a-photo.tsx` file.
+8. Create a new `/app/[userKey]/post-a-photo.tsx` file.
 
-7. Add the below changes to this file.
+9. Add the below changes to this file.
 ```tsx
 import { Text } from 'react-native';
 
@@ -58,20 +58,27 @@ export default function PostAPhoto() {
 
 Now, open the app to the chat screen and click on the camera IconButton.  You should be taken to the new screen where we will be adding the feature to take and post a photo from the camera on your phone.
 
+10. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
+11. Copy the below commands and paste them into the command prompt window:
+```
+git add .
+git commit -m "session-13-post-a-photo done"
+```
+
 We are going to replace the content of what is in the `/app/[userKey]/post-a-photo.tsx` file with the example code from the below website.
 
 https://docs.expo.dev/versions/latest/sdk/camera/
 
 Before we do that though, we need to install the `expo-camera` library to help us work with the camera on your phone.
 
-8. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
+12. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 
-9. From the command prompt window, enter the below command to run this application in it's initial state:
+13. From the command prompt window, enter the below command to run this application in it's initial state:
 ```
 npx expo install expo-camera
 ```
 
-10. Now let's replace the content of what is in the `/app/[userKey]/post-a-photo.tsx` file with the example code from https://docs.expo.dev/versions/latest/sdk/camera/.
+14. Now let's replace the content of what is in the `/app/[userKey]/post-a-photo.tsx` file with the example code from https://docs.expo.dev/versions/latest/sdk/camera/.
 ```tsx
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useState } from 'react';
@@ -148,7 +155,7 @@ Now when you click the camera IconButton from the chat screen, you should be tak
 
 Let's have this screen actually capture a photo.
 
-11. Add the below code to the component:
+15. Add the below code to the component:
 ```tsx
 // Add `useRef` to the import here.
 import { useRef, useState } from 'react';
@@ -189,13 +196,13 @@ This should now allow the Post A Photo screen to actually capture an image from 
 
 Let's refactor this a bit to use our common `<IconButton/>` component instead of those `<TouchableOpacity/>` components.
 
-12. Add the import to the top of the file.
+16. Add the import to the top of the file.
 ```tsx
 import Constants from "@/app/constants";
 import IconButton from '@/app/components/IconButton';
 ```
 
-13. Update the bottom of this component from this:
+17. Update the bottom of this component from this:
 ```tsx
 return (
     <View style={styles.container}>
@@ -261,7 +268,7 @@ Now the buttons at the bottom should be using our common component.
 
 Lastly, let's update the `takePicture()` function so that it actually saves the image as a new message for our chat.
 
-14. Update this file again with these new imports
+18. Update this file again with these new imports
 ```tsx
 // Add Platform here to this import.
 import { Button, Platform, StyleSheet, Text, View } from 'react-native';
