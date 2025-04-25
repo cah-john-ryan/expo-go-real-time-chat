@@ -120,6 +120,8 @@ git add .
 git commit -m "session-8-message-presentationdone"
 ```
 
+11. Submit a message in the chat stating your name and that you have completed this session.
+
 ### SESSION COMPLETE
 
 Up next -> [Session 9 - Message Presentation of your own messages](session-9-message-presentation-of-yourself.md)
