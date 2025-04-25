@@ -46,15 +46,15 @@ From this:
 ```tsx
 messageListing: {
     flex: 1,
-    padding: Constants.layout.padding,
+    paddingHorizontal: Constants.layout.padding,
     gap: Constants.layout.padding,
 },
 ```
 To this:
 ```tsx
-    messageListing: {
-        paddingHorizontal: Constants.layout.padding,
-    },
+messageListing: {
+    paddingHorizontal: Constants.layout.padding,
+},
 ```
 
 4. Open both the `/app/components/MessageFromSelf.tsx` and the `/app/components/MessageFromSomeoneElse.tsx` components.  Add the below line to their styling:
