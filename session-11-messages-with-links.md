@@ -9,9 +9,9 @@ I found a popular library below from Josh Swan that looks like a good candidate 
 
 https://github.com/joshswan/react-native-autolink
 
-1. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+1. In Visual Studio Code, open the command prompt window at the bottom of your screen.
 
-2. From the command prompt window, enter the below command to run this application in it's initial state:
+2. From the command prompt window, enter the below command:
 ```
 npm install react-native-autolink
 ```
