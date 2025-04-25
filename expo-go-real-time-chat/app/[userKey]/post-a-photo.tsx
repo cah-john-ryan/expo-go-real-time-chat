@@ -1,6 +1,8 @@
 import { CameraView, CameraType, useCameraPermissions } from 'expo-camera';
 import { useRef, useState } from 'react';
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import Constants from "@/app/constants";
+import IconButton from '@/app/components/IconButton';
 
 export default function PostAPhoto() {
   const ref = useRef<CameraView>(null);
@@ -38,13 +40,16 @@ export default function PostAPhoto() {
     <View style={styles.container}>
       <CameraView style={styles.camera} facing={facing} ref={ref}>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={toggleCameraFacing}>
-            <Text style={styles.text}>Flip Camera</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity style={styles.button} onPress={takePicture}>
-                <Text style={styles.text}>Take Photo</Text>
-          </TouchableOpacity>
+            <IconButton 
+                style={styles.button}
+                name="refresh"
+                onPress={toggleCameraFacing}
+            />
+            <IconButton 
+                style={styles.button}
+                name="camera"
+                onPress={takePicture}
+            />
         </View>
       </CameraView>
     </View>
@@ -68,6 +73,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'transparent',
     margin: 64,
+    gap: Constants.layout.padding
   },
   button: {
     flex: 1,
