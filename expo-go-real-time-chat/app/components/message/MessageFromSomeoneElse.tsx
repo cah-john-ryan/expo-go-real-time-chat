@@ -2,6 +2,7 @@ import { StyleSheet, Text, View } from "react-native";
 import UserData from "@/app/objects/UserData";
 import MessageObject from "@/app/objects/MessageObject";
 import Constants from "@/app/constants";
+import Autolink from "react-native-autolink";
 
 type Props = {
     message: MessageObject;
@@ -14,9 +15,13 @@ export default function MessageFromSomeoneElse({message, userDataForMessage}: Re
 
                 <Text>{userDataForMessage?.userName}</Text>
 
-                <Text style={styles.messageTextContainer}>
-                    {message.messageText}
-                </Text>
+                <Autolink 
+                    style={styles.messageTextContainer}
+                    text={message.messageText}
+                    email
+                    url
+                    phone="sms"
+                />
                 
             </View>
         </View>

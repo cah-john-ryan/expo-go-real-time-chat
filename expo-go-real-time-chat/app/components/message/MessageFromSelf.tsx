@@ -1,6 +1,7 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import MessageObject from "@/app/objects/MessageObject";
 import Constants from "@/app/constants";
+import Autolink from 'react-native-autolink';
 
 type Props = {
     message: MessageObject;
@@ -9,9 +10,13 @@ export default function MessageFromSelf({message}: Readonly<Props>) {
     return (
         <View style={styles.container}>
             <View style={styles.messageContainer}>
-                <Text style={styles.messageTextContainer}>
-                    {message.messageText}
-                </Text>
+                <Autolink 
+                    style={styles.messageTextContainer}
+                    text={message.messageText}
+                    email
+                    url
+                    phone="sms"
+                />
             </View>
         </View>
     );
@@ -31,7 +36,7 @@ const styles = StyleSheet.create({
         padding: Constants.layout.padding,
 
         // Have messages from self stand out using the primary color of our app.
-        backgroundColor: Constants.colors.primaryColor, 
+        backgroundColor: Constants.colors.primaryColor,
         color: Constants.colors.primaryColorText
-    },
+    }
 });
