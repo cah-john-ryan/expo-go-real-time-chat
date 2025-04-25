@@ -131,7 +131,7 @@ git add .
 git commit -m "session-9-message-presentation-of-yourself done"
 ```
 
-8. Submit a message in the chat stating that you have completed this session.
+8. Submit a message in the chat stating that you have completed this session.  No need to add your name any longer, everyone should be able to tell automatically with the completion of this session.
 
 ### SESSION COMPLETE
 
