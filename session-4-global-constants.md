@@ -106,7 +106,7 @@ The landing screen should now present itself using the settings and colors you h
 
 Let's save the state of your work now that this session is done.
 
-8. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+8. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 9. Copy the below commands and paste them into the command prompt window:
 ```
 git add .

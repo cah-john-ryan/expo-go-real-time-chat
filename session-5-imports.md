@@ -8,7 +8,7 @@ This is less creative that the last sessions to where I am asking you to basical
 Information on Firebase:
 - https://firebase.google.com/
 
-1. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+1. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 
 2. From the command prompt window, enter the below commands to install the needed libraries to work with Firebase:
 ```
@@ -133,7 +133,7 @@ Your application is now wired up to work with a Firebase instance to create and 
 >
 > [index.tsx file for session 5](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-5-imports/expo-go-real-time-chat/app/index.tsx)
 
-18. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+18. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 19. Copy the below commands and paste them into the command prompt window:
 ```
 git add .

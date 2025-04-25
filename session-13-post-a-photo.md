@@ -64,7 +64,7 @@ https://docs.expo.dev/versions/latest/sdk/camera/
 
 Before we do that though, we need to install the `expo-camera` library to help us work with the camera on your phone.
 
-8. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+8. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 
 9. From the command prompt window, enter the below command to run this application in it's initial state:
 ```

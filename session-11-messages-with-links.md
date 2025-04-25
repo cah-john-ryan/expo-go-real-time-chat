@@ -66,7 +66,7 @@ If you look at the website for this `<AutoLink/>` component, there are several o
 >
 > [MessageFromSomeoneElse.ts file for session 11](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-11-messages-with-links/expo-go-real-time-chat/app/components/MessageFromSomeoneElse.tsx)
 
-7. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+7. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 8. Copy the below commands and paste them into the command prompt window:
 ```
 git add .

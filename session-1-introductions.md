@@ -34,7 +34,7 @@ https://expo.dev/go
 1. Power on your laptop and make your way to where you see the Windows Desktop presented.
 2. Click on the Visual Studio Code icon.
 3. In Visual Studio Code, open the the folder `/Documents/expo-go-real-time-chat/`.  You should see in Visual Studio Code now the project we will be using to build this application.
-4. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+4. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 5. From the command prompt window, enter the below command to run this application in it's initial state:
 ```
 npx create-expo-app@latest

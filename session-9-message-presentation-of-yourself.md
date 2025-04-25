@@ -124,7 +124,7 @@ You should now see messages for yourself and messages for other people displayed
 > [chat.tsx file for session 9](https://github.com/cah-john-ryan/expo-go-real-time-chat/blob/session-9-message-presentation-of-yourself/expo-go-real-time-chat/app/%5BuserKey%5D/chat.tsx)
 
 
-6. In Visual Studio Code, open a new command prompt window which should automatically be displayed in the bottom of your screen.
+6. In Visual Studio Code, open the command prompt window which should be found at the bottom of your screen.
 7. Copy the below commands and paste them into the command prompt window:
 ```
 git add .
